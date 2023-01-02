@@ -1,10 +1,176 @@
-header{
+nav {
     display: flex;
     justify-content: space-between;
-    height: 112px;
+    align-items: center;
+    height: 92px;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
 
     img {
-        width: 40px;
+        width: 35px;
         cursor: pointer;
+
+        @media (max-width: 400px) {
+            width: 30px;          
+        }
+    }
+
+}
+
+.header-container {
+    height: 100vh;
+
+}
+
+.header {
+    position: relative;
+
+    h1 {
+        position: relative;
+        font-size: clamp(40px, 8vw, 128px);
+        font-weight: 800;
+        text-align: center;
+        margin-top: 204px;
+        letter-spacing: -0.025em;
+        line-height: 100%;
+    }
+
+    ::before {
+        content: "";
+        width: 28%;
+        height: 3px;
+        background: #000;
+        left: 24%;
+        top: 119%;
+        position: absolute;
+  
+        @media (max-width: 1880px) {
+            right: 23%;   
+        }
+
+        @media (max-width: 1800px) {
+            left: 20%;
+            width: 30%;           
+        }
+
+        @media (max-width: 1550px) {
+            left: 18%;
+            width: 33%;           
+        }
+
+        @media (max-width: 1450px) {
+            width: 30%;           
+        }
+
+        @media (max-width: 1350px) {
+            width: 27%; 
+            top: 120%;          
+        }
+
+        @media (max-width: 1250px) {
+            width: 24%; 
+            top: 121%;          
+        }
+
+        @media (max-width: 1200px) {
+            width: 26%; 
+            left: 15%;       
+        }
+
+
+        @media (max-width: 800px) {
+            width: 27%; 
+            left: 14%;       
+        }
+
+        @media (max-width: 780px) {
+            width: 24%; 
+            left: 17%;       
+        }
+        
+        @media (max-width: 560px) {
+            width: 21%;       
+        }
+        
+        @media (max-width: 515px) {
+            left: 18%;       
+            width: 18%;       
+        }
+
+        @media (max-width: 495px) {
+            left: 17%;       
+            width: 17%;       
+        }
+        
+        @media (max-width: 450px) {
+            left: 13%;           
+        }
+        @media (max-width: 390px) {
+            left: 7%;           
+            width: 23%;       
+        }
+    }
+    
+    ::after{
+        content: "Vanessa Würdinger";
+        position: absolute;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+        font-size: clamp(23px, 4vw, 48px);
+        line-height: 100%;
+        letter-spacing: -0.025em;
+        color: #FF9900;
+        right: 23%;
+        top: 110%;
+
+        @media (max-width: 1880px) {
+            right: 22%;   
+        }
+
+        @media (max-width: 1800px) {
+            right: 19%;   
+        }
+
+        @media (max-width: 1550px) {
+            right: 16%           
+        }
+
+        @media (max-width: 1500px) {
+            right: 15%;         
+        }
+
+        @media (max-width: 1200px) {
+            right: 14%;
+        }
+
+        @media (max-width: 885px) {
+            right: 11%;      
+        }
+        
+        @media (max-width: 780px) {
+            right: 16%;       
+        }
+        @media (max-width: 640px) {
+            right: 14%;       
+        }
+
+        @media (max-width: 560px) {
+            right: 16%;       
+        }
+
+        @media (max-width: 480px) {
+            right: 13%;       
+        }
+
+        @media (max-width: 430px) {
+            right: 8%;       
+        }
+
+        @media (max-width: 390px) {
+            right: 4%;       
+        }
     }
 }
