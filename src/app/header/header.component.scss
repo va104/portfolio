@@ -1,20 +1,25 @@
+
+$back: #333;
+$color: #b3c33a;
+$speed: 1.5s;
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 92px;
     position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     img {
         width: 35px;
         cursor: pointer;
 
         @media (max-width: 400px) {
-            width: 30px;          
+            width: 30px;
         }
     }
 
@@ -22,7 +27,9 @@ nav {
 
 .header-container {
     height: 100vh;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .header {
@@ -46,75 +53,76 @@ nav {
         left: 24%;
         top: 119%;
         position: absolute;
-  
+
         @media (max-width: 1880px) {
-            right: 23%;   
+            right: 23%;
         }
 
         @media (max-width: 1800px) {
             left: 20%;
-            width: 30%;           
+            width: 30%;
         }
 
         @media (max-width: 1550px) {
             left: 18%;
-            width: 33%;           
+            width: 33%;
         }
 
         @media (max-width: 1450px) {
-            width: 30%;           
+            width: 30%;
         }
 
         @media (max-width: 1350px) {
-            width: 27%; 
-            top: 120%;          
+            width: 27%;
+            top: 120%;
         }
 
         @media (max-width: 1250px) {
-            width: 24%; 
-            top: 121%;          
+            width: 24%;
+            top: 121%;
         }
 
         @media (max-width: 1200px) {
-            width: 26%; 
-            left: 15%;       
+            width: 26%;
+            left: 15%;
         }
 
 
         @media (max-width: 800px) {
-            width: 27%; 
-            left: 14%;       
+            width: 27%;
+            left: 14%;
         }
 
         @media (max-width: 780px) {
-            width: 24%; 
-            left: 17%;       
+            width: 24%;
+            left: 17%;
         }
-        
+
         @media (max-width: 560px) {
-            width: 21%;       
+            width: 21%;
         }
-        
+
         @media (max-width: 515px) {
-            left: 18%;       
-            width: 18%;       
+            left: 18%;
+            width: 18%;
         }
 
         @media (max-width: 495px) {
-            left: 17%;       
-            width: 17%;       
+            left: 17%;
+            width: 17%;
         }
-        
+
         @media (max-width: 450px) {
-            left: 13%;           
+            left: 13%;
         }
+
         @media (max-width: 390px) {
-            left: 7%;           
-            width: 23%;       
+            left: 7%;
+            width: 23%;
         }
     }
-    
-    ::after{
+
+    ::after {
         content: "Vanessa Würdinger";
         position: absolute;
         font-family: 'Overpass', sans-serif;
@@ -127,19 +135,19 @@ nav {
         top: 110%;
 
         @media (max-width: 1880px) {
-            right: 22%;   
+            right: 22%;
         }
 
         @media (max-width: 1800px) {
-            right: 19%;   
+            right: 19%;
         }
 
         @media (max-width: 1550px) {
-            right: 16%           
+            right: 16%
         }
 
         @media (max-width: 1500px) {
-            right: 15%;         
+            right: 15%;
         }
 
         @media (max-width: 1200px) {
@@ -147,30 +155,122 @@ nav {
         }
 
         @media (max-width: 885px) {
-            right: 11%;      
+            right: 11%;
         }
-        
+
         @media (max-width: 780px) {
-            right: 16%;       
+            right: 16%;
         }
+
         @media (max-width: 640px) {
-            right: 14%;       
+            right: 14%;
         }
 
         @media (max-width: 560px) {
-            right: 16%;       
+            right: 16%;
         }
 
         @media (max-width: 480px) {
-            right: 13%;       
+            right: 13%;
         }
 
         @media (max-width: 430px) {
-            right: 8%;       
+            right: 8%;
         }
 
         @media (max-width: 390px) {
-            right: 4%;       
+            right: 4%;
         }
+    }
+}
+
+.header-contact {
+    position: relative;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+
+    span:first-child {
+        transform: translateX(-46%) rotate(-90deg);
+        top: 215px;
+        position: absolute;
+    }
+
+    span:nth-child(3) {
+        position: absolute;
+        top: 310px;
+        right: 0;
+        width: 60px;
+        text-align: center;
+    }
+
+    .arrow {
+        transform: rotate(180deg);
+        position: absolute;
+        top: 285px;
+        right: 0;
+        margin-top: -30px;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        overflow: hidden;
+        width: 60px;
+    
+        // Line 
+        &:before {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            background: black;
+            width: 2px;
+            height: 40px;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            margin-left: -3px;
+            transform: translateY(50px);
+            animation: lineUp $speed cubic-bezier(0.28, 0.34, 0.53, 1.11) infinite .5s;
+        }
+    
+        // Arrow point
+        &:after {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            width: 20px;
+            height: 20px;
+            color: black;
+            border-top: 2px solid;
+            border-left: 2px solid;
+            top: 50%;
+            left: 50%;
+            margin-top: -6px;
+            margin-left: -13px;
+            animation: tipUp $speed cubic-bezier(0.28, 0.34, 0.53, 1.11) infinite .5s;
+        }
+    }
+}
+
+
+
+
+@keyframes tipUp {
+    0% {
+        transform: translateY(50px) rotateZ(45deg);
+    }
+
+    100% {
+        transform: translateY(-70px) rotateZ(45deg);
+    }
+}
+
+@keyframes lineUp {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(-70px);
     }
 }
