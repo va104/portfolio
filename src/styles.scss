@@ -19,10 +19,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-    font-size: clamp(35px, 4vw, 78px);
+    // font-size: clamp(35px, 4vw, 78px);
+    font-size: 78px;
     font-weight: 800;
     line-height: 100%;
     letter-spacing: 0.01em;
+    margin: 0;
 }
 
 span {
@@ -94,6 +96,10 @@ button {
     justify-content: space-between;
 }
 
+.just-end {
+    justify-content: end;
+}
+
 .d-none {
     display: none;
 }
@@ -120,4 +126,16 @@ button {
 
 .p-top-5 {
     padding-top: 5%;
+}
+
+.p-bottom-5 {
+    padding-bottom: 5%;
+}
+
+.p-bottom-110 {
+    padding-bottom: 110px;
+}
+
+.p-right-180 {
+    padding-right: 180px;
 }

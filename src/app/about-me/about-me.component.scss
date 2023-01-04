@@ -14,7 +14,7 @@
     }
 
     img {
-        width: 400px;
+        width: 500px;
         max-width: 100%;
         height: auto;
         object-fit: cover;
@@ -44,11 +44,11 @@
 h2 {
     display: inline;
     transition: 0.25s;
-}
 
-h2:hover {
-    color: #FF9900;
-    cursor: context-menu;
+    &:hover{
+        color: #FF9900;
+        cursor: context-menu;
+    }
 }
 
 button {

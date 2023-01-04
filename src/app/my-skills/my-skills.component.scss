@@ -1,0 +1,52 @@
+h2 {
+    background-color: #FFFCF3;
+    padding: 0 20px;
+    top: -40px;
+    position: absolute;
+    transition: 0.25s;
+
+    &:hover {
+        color: #FF9900;
+        cursor: context-menu;
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px;
+    border: 4px solid black;
+    padding: 10%;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);  
+        grid-template-areas:
+        "a a a a"
+        "a a a a"
+        "d b c e"
+    }
+}
+
+.grid-child {
+    align-self: center;
+    justify-self: center;
+
+    p {
+        font-size: 16px;
+        line-height: 19.2px;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1200px) {
+    .item7 {
+        grid-area: b;
+        align-self: center;       
+    }
+
+    .item8 {
+        grid-area: c;
+        align-self: center;       
+    }
+}
