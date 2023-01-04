@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
+import { HighlightImageDirective } from './about-me/highlight-image.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
     FooterComponent,
     AboutMeComponent,
     ContactFormComponent,
-    MySkillsComponent
+    MySkillsComponent,
+    HighlightImageDirective
   ],
   imports: [
     BrowserModule,

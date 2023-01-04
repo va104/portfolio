@@ -1,35 +1,114 @@
-// .about-me {
-//     img {
-//         width: 400px;
-//         height: 400px;
-//         object-fit: cover;
-//     }
-// }
+.about-me-wrapper {
+    padding-top: 5%;
 
-// h2 {
-//     transition: 0.25s;
-// }
+    @media (max-width: 1150px) {
+        padding-top: 10%;
+    }
+}
 
-// h2:hover {
-//     color: #FF9900;
-//     cursor: context-menu;
-// }
+.profile-image {
+    position: relative;
 
-// button {
-//     transition: 0.1s;
-// }
+    @media (max-width: 1150px) {
+        margin: 55px auto 30px;
+    }
 
-// button:hover {
-//     cursor: pointer;
-//     font-weight: 700;
-//     width: 244px;
-// }
+    img {
+        width: 400px;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
-// .image-line{
-//     position: absolute;
-//     left: 3.62%;
-//     right: -3.62%;
-//     top: 3.62%;
-//     bottom: -2%;
-//     border: 4px solid #A77C60;
-// }
+    &::after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      left: 10px;
+      right: -10px;
+      top: 10px;
+      bottom: -5px;
+      border: 4px solid #ceb0a8;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:hover::after {
+        left: 15px;
+        right: -15px;
+        top: 15px;
+        bottom: -10px;
+        opacity: 1;
+    }
+}
+
+h2 {
+    display: inline;
+    transition: 0.25s;
+}
+
+h2:hover {
+    color: #FF9900;
+    cursor: context-menu;
+}
+
+button {
+    transition: 0.1s;
+}
+
+button:hover {
+    cursor: pointer;
+    font-weight: 700;
+    width: 244px;
+}
+
+
+.shadow {
+    h2 {
+        text-transform: capitalize;
+        font-size: 35px !important;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        bottom: 2rem;
+        text-align: center;
+        letter-spacing: 0.01em;
+        display: block !important;
+    }
+}
+
+.shadow::before {
+    content: "About Me";
+    text-transform: lowercase;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    opacity: .1;
+    font-weight: 900;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+}
+
+.mobile-container{
+    @media (max-width: 1150px) {
+        flex-direction: column;
+
+        p {
+            width: 100%;
+        }
+    }
+}
+
+.only-desktop{
+    @media (max-width: 1150px) {
+        display: none;
+    }  
+}
+
+.about-me-only-mobile {
+    @media (min-width: 1150px) {
+        display: none;
+    }      
+}
