@@ -18,18 +18,22 @@
         max-width: 100%;
         height: auto;
         object-fit: cover;
+
+        @media (max-width: 1150px) {
+            width: 400px;
+        }
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      opacity: 0;
-      left: 10px;
-      right: -10px;
-      top: 10px;
-      bottom: -5px;
-      border: 4px solid #ceb0a8;
-      transition: 0.2s ease-in-out;
+        content: '';
+        position: absolute;
+        opacity: 0;
+        left: 10px;
+        right: -10px;
+        top: 10px;
+        bottom: -5px;
+        border: 4px solid #ceb0a8;
+        transition: 0.2s ease-in-out;
     }
 
     &:hover::after {
@@ -44,11 +48,15 @@
 h2 {
     display: inline;
     transition: 0.25s;
+}
 
-    &:hover{
-        color: #FF9900;
-        cursor: context-menu;
-    }
+.mobile-color-hover {
+    color: #FF9900;
+    cursor: context-menu;
+}
+
+.mobile-non-hover {
+    color: black;
 }
 
 button {
@@ -65,7 +73,7 @@ button:hover {
 .shadow {
     h2 {
         text-transform: capitalize;
-        font-size: 35px !important;
+        font-size: 37px !important;
         font-weight: 900;
         margin: 0;
         padding: 0;
@@ -80,7 +88,7 @@ button:hover {
 .shadow::before {
     content: "About Me";
     text-transform: lowercase;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     opacity: .1;
     font-weight: 900;
@@ -89,26 +97,68 @@ button:hover {
     left: 0;
     border-bottom: 2px solid black;
     margin-bottom: 30px;
+
+    @media (max-width: 400px) {
+        font-size: 3rem;
+    }
 }
 
-.mobile-container{
+.arrow {
+    img {
+        height: 210px;
+
+        @media (max-width: 500px) {
+            height: 115px;
+        }
+    }
+
+}
+
+.p-right-180 {
+    @media (max-width: 600px) {
+        padding-right: 100px;
+    }
+
+    @media (max-width: 400px) {
+        padding-right: 40px;
+    }
+}
+
+.p-bottom-110 {
+    @media (max-width: 500px) {
+        padding-bottom: 80px;
+        ;
+    }
+}
+
+.mobile-container {
     @media (max-width: 1150px) {
         flex-direction: column;
 
-        p {
+        .width-90 {
             width: 100%;
+        }
+
+        &.p-top-5 {
+            padding-top: 0;
         }
     }
 }
 
-.only-desktop{
+.only-desktop {
     @media (max-width: 1150px) {
         display: none;
-    }  
+    }
+}
+
+.only-desktop:hover {
+    color: #FF9900;
+    cursor: context-menu;
+
 }
 
 .about-me-only-mobile {
     @media (min-width: 1150px) {
         display: none;
-    }      
+    }
 }

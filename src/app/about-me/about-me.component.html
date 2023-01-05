@@ -2,7 +2,7 @@
     <h2 class="only-desktop">About me</h2>
     <div class="d-flex about-me-only-mobile">
         <div class="shadow">
-            <h2>About</h2>
+            <h2 (click)="this.toggleHeader = !this.toggleHeader" [ngClass]="{'mobile-color-hover' : toggleHeader, 'mobile-non-hover': !toggleHeader}">About</h2>
         </div>
     </div>
     <div class="d-flex just-between p-top-5 mobile-container">
@@ -22,7 +22,7 @@
             <img src="../../assets/images/profile.png" alt="Profile-picture">
         </div>
     </div>
-    <div class="d-flex just-end p-right-180 p-bottom-110">
+    <div class="d-flex just-end p-right-180 p-bottom-110 arrow">
         <!-- <img src="../../assets/icons/arrow/arrow-start.svg" alt="Arrow"> -->
         <img src="../../assets/icons/arrow/arrow-middle.svg" alt="Arrow">
     </div>

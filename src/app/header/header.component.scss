@@ -1,5 +1,9 @@
 $speed: 1.5s;
 
+h3 {
+    font-weight: 900;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +37,7 @@ nav {
     position: relative;
 
     h1 {
-        font-size: clamp(30px, 8vw, 128px);
+        font-size: clamp(30px, 9vw, 128px);
         font-weight: 800;
         text-align: center;
         margin-top: 204px;
