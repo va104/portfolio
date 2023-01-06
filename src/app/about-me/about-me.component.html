@@ -1,8 +1,9 @@
 <div class="section about-me-wrapper">
-    <h2 class="only-desktop">About me</h2>
-    <div class="d-flex about-me-only-mobile">
+    <h2 appHighlightHeader class="only-desktop">About me</h2>
+    <div class="d-flex just-center only-mobile">
         <div class="shadow">
-            <h2 (click)="this.toggleHeader = !this.toggleHeader" [ngClass]="{'mobile-color-hover' : toggleHeader, 'mobile-non-hover': !toggleHeader}">About</h2>
+            <!-- only for mobile because hover doesn´t work -->
+            <h2 appHighlightImage>About</h2>
         </div>
     </div>
     <div class="d-flex just-between p-top-5 mobile-container">
@@ -18,8 +19,11 @@
                 <button>Let&#8217;s talk</button>
             </div>
         </div>
-        <div class="pos-rel profile-image">
+        <div class="pos-rel profile-image only-desktop width-fit">
             <img src="../../assets/images/profile.png" alt="Profile-picture">
+        </div>
+        <div class="pos-rel profile-image only-mobile width-fit">
+            <img src="../../assets/images/profile_mobile.jpg" alt="Profile-picture">
         </div>
     </div>
     <div class="d-flex just-end p-right-180 p-bottom-110 arrow">

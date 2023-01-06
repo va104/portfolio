@@ -15,15 +15,18 @@
 
     img {
         width: 500px;
+        height: 500px;
         max-width: 100%;
-        height: auto;
         object-fit: cover;
 
         @media (max-width: 1150px) {
             width: 400px;
+            height: 400px;
         }
     }
+}
 
+.profile-image.only-desktop {
     &::after {
         content: '';
         position: absolute;
@@ -31,7 +34,7 @@
         left: 10px;
         right: -10px;
         top: 10px;
-        bottom: -5px;
+        bottom: -10px;
         border: 4px solid #ceb0a8;
         transition: 0.2s ease-in-out;
     }
@@ -45,18 +48,51 @@
     }
 }
 
+
+.profile-image.only-mobile {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: -15px;
+        top: 15px;
+        bottom: -10px;
+        opacity: 1;
+        border: 4px solid #000000;
+        transition: 0.2s ease-in-out;
+
+        @media (max-width: 450px) {
+            left: 10px;
+            right: -10px;
+            top: 10px;
+            bottom: -5px;
+            border: 2px solid #000000;
+        }
+    }
+
+    img {
+        @media (max-width: 550px) {
+            width: 350px;
+            height: 350px;
+
+        }
+
+        @media (max-width: 400px) {
+            width: 300px;
+            height: 300px;
+        }
+
+        @media (max-width: 300px) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+}
+
 h2 {
     display: inline;
     transition: 0.25s;
-}
-
-.mobile-color-hover {
-    color: #FF9900;
-    cursor: context-menu;
-}
-
-.mobile-non-hover {
-    color: black;
 }
 
 button {
@@ -68,7 +104,6 @@ button:hover {
     font-weight: 700;
     width: 244px;
 }
-
 
 .shadow {
     h2 {
@@ -82,6 +117,11 @@ button:hover {
         text-align: center;
         letter-spacing: 0.01em;
         display: block !important;
+
+        @media (max-width: 400px) {
+            font-size: 30px !important;
+            bottom: 27px;
+        }
     }
 }
 
@@ -126,7 +166,7 @@ button:hover {
 
 .p-bottom-110 {
     @media (max-width: 500px) {
-        padding-bottom: 80px;
+        padding-bottom: 40px;
         ;
     }
 }
@@ -142,23 +182,5 @@ button:hover {
         &.p-top-5 {
             padding-top: 0;
         }
-    }
-}
-
-.only-desktop {
-    @media (max-width: 1150px) {
-        display: none;
-    }
-}
-
-.only-desktop:hover {
-    color: #FF9900;
-    cursor: context-menu;
-
-}
-
-.about-me-only-mobile {
-    @media (min-width: 1150px) {
-        display: none;
     }
 }

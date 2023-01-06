@@ -11,22 +11,18 @@ h2 {
     }
 
     @media (max-width: 1200px) {
-        font-size: 4rem;
         top: -30px;
     }
 
     @media (max-width: 750px) {
-        font-size: 3rem;
         top: -23px;
     }
 
     @media (max-width: 400px) {
-        font-size: 2.5rem;
         top: -20px;
     }
 
     @media (max-width: 380px) {
-        font-size: 1.6rem;
         top: -13px;
     }
 }
@@ -102,10 +98,6 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-    .item {
-        grid-area: a;
-        align-self: center;
-    }
 
     .item8 {
         grid-area: b;
