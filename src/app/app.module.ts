@@ -11,6 +11,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { HighlightHeaderDirective } from './directives/highlight-header.directive';
+import { MyWorkMobileComponent } from './my-work-mobile/my-work-mobile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightHeaderDirective } from './directives/highlight-header.directiv
     AboutMeComponent,
     ContactFormComponent,
     MySkillsComponent,
-    HighlightHeaderDirective
+    HighlightHeaderDirective,
+    MyWorkMobileComponent
   ],
   imports: [
     BrowserModule,
