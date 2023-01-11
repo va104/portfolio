@@ -44,16 +44,18 @@ h2 {
         padding-left: 130px;
         transform: translateX(-200px);
         opacity: 0;
-
+        animation: textFadeOutRightToLeft 0.2s ease;
+        
         @media (max-width: 1670px) {
             padding-left: 80px;         
         }
     }
-
+    
     .left {
         padding-right: 130px;
         transform: translateX(200px);
         opacity: 0;
+        animation: textFadeOutLeftToRight 0.2s ease;
 
         @media (max-width: 1670px) {
             padding-right: 80px;          
@@ -87,8 +89,6 @@ h2 {
             font-size: 44px;         
         }
     }
-
-
 
     &--is-intersecting {
         .project-image-right {

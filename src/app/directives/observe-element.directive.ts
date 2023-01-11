@@ -13,7 +13,7 @@ export class ObserveElementDirective {
   @Input() debounceTime = 250 // tells us when the user has stopped scrolling
   @Input() isContinuous = false //flag that we use to decide whether we want to continue observing an element for visibility changes
 
-  @Output() isIntersecting = new EventEmitter<boolean>() //emits an event that tells us if the element is intersecting
+  @Output() isIntersectingEmitter = new EventEmitter<boolean>() //emits an event that tells us if the element is intersecting
 
   _isIntersecting = false //a public property that we use to trigger changes to the template
   subscription: Subscription
@@ -55,7 +55,7 @@ export class ObserveElementDirective {
     })
       .pipe(debounceTime(this.debounceTime))
       .subscribe(status => {
-        this.isIntersecting.emit(status)
+        this.isIntersectingEmitter.emit(status)
         this._isIntersecting = status
       })
   }

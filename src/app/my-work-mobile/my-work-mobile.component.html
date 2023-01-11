@@ -12,7 +12,14 @@
     </div>
     <!-- Ring Of Fire -->
     <div class="count-projects right">01/06</div>
-    <div class="project-wrapper d-flex d-column pos-rel">
+    <div 
+    class="project-wrapper d-flex d-column pos-rel"
+    appObserveElement 
+    #rof='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="rof._isIntersecting"
+    >
         <div class="project-image-left">
             <img src="../../assets/images/projects/portfolio_ringOfFire.png" alt="RingOfFire">
         </div>
@@ -29,7 +36,13 @@
     </div>
     <!-- My Portfolio -->
     <div class="count-projects">02/06</div>
-    <div class="project-wrapper d-flex d-column pos-rel align-end">
+    <div 
+    class="project-wrapper d-flex d-column pos-rel align-end"
+    appObserveElement 
+    #portfolio='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="portfolio._isIntersecting">
         <div class="project-image-right">
             <img src="../../assets/images/projects/portfolio.png" alt="Portfolio">
         </div>

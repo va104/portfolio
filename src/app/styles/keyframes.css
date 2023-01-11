@@ -54,6 +54,18 @@
     }
 }
 
+@keyframes textFadeOutRightToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
 @keyframes slideTextFromRightToLeft {
     from {
         transform: translateX(200px);
@@ -62,6 +74,18 @@
     to {
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+@keyframes textFadeOutLeftToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(200px);
+        opacity: 0;
     }
 }
 
