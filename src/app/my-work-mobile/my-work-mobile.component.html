@@ -1,8 +1,8 @@
 <div class="section">
-    <div class="d-flex p-left-180 p-bottom-60 p-top-100 arrow">
+    <div data-aos="fade-down-right" data-aos-offset="200"  class="d-flex p-left-180 p-bottom-60 p-top-100 arrow">
         <img src="../../assets/icons/arrow/arrow-left-middle.svg" alt="Arrow">
     </div>
-    <div data-aos="zoom-in" data-aos-delay="200" class="d-flex d-column align-center">
+    <div data-aos="zoom-in" class="d-flex d-column align-center">
         <div class="d-flex only-mobile">
             <div class="shadow">
                 <h2 appHighlightHeader>Portfolio</h2>
@@ -16,7 +16,6 @@
         class="project-wrapper d-flex d-column pos-rel"
         appObserveElement 
         #rof='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="rof._isIntersecting">
         <div class="project-image-left">
@@ -39,7 +38,6 @@
         class="project-wrapper d-flex d-column pos-rel align-end"
         appObserveElement 
         #portfolio='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="portfolio._isIntersecting">
         <div class="project-image-right">
@@ -59,7 +57,6 @@
     <div class="project-wrapper d-flex d-column pos-rel"
         appObserveElement 
         #join='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="join._isIntersecting">>
         <div class="project-image-left">
@@ -82,7 +79,6 @@
         class="project-wrapper d-flex d-column pos-rel align-end"
         appObserveElement 
         #epl='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="epl._isIntersecting">
         <div class="project-image-right">
@@ -105,7 +101,6 @@
         class="project-wrapper d-flex d-column pos-rel"
         appObserveElement 
         #pokedex='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="pokedex._isIntersecting">
         <div class="project-image-left">
@@ -126,7 +121,6 @@
     <div class="project-wrapper d-flex d-column pos-rel align-end"
         appObserveElement 
         #donuthero='intersectionExport' 
-        [isContinuous]="true"
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="donuthero._isIntersecting">
         <div class="project-image-right">

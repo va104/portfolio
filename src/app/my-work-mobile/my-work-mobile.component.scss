@@ -46,13 +46,14 @@ h2 {
     text-transform: lowercase;
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
-    opacity: .1;
     font-weight: 900;
     position: relative;
     top: 0;
     left: 0;
-    border-bottom: 2px solid black;
     margin-bottom: 30px;
+    color: #FF9900;
+    border-bottom: 2px solid #ff9900;
+    opacity: .3;
 
     @media (max-width: 400px) {
         font-size: 3rem;

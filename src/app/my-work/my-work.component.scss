@@ -195,6 +195,26 @@ h2 {
     }
 }
 
+.line{
+    width: 85%;
+    height: 4px;
+    background-color: #FF9900;
+    position: absolute;
+    top: 50px;
+    right: -10%;
+    
+    @media (max-width: 1200px) {
+        top: 35px;
+    }
+}
+
+.line-header {
+    z-index: 2;
+    position: relative;
+    background: #FFFCF3;
+    padding: 0 40px;
+}
+
 button {
     transition: 0.1s;
 

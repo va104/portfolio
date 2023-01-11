@@ -1,10 +1,11 @@
-<div class="section">
-    <div class="d-flex p-left-180 p-bottom-60 p-top-100 arrow">
+<div class="section overflow-hidden">
+    <div data-aos="fade-down-right" data-aos-offset="200" class="d-flex p-left-180 p-bottom-60 p-top-100 arrow">
         <img src="../../assets/icons/arrow/arrow-left-middle.svg" alt="Arrow">
     </div>
-    <div data-aos="zoom-in" data-aos-delay="200" class="d-flex d-column align-center">
+    <div data-aos="fade-left" data-aos-offset="100" class="d-flex d-column align-center">
+        <div class="line"></div>
         <div class="only-desktop">
-            <h2 appHighlightHeader>Portfolio</h2>
+            <h2 appHighlightHeader class="line-header">Portfolio</h2>
         </div>
         <p class="text-center">This page is samle of my work - please feel free to try them out.</p>
     </div>
@@ -13,7 +14,6 @@
     class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #rof='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="rof._isIntersecting"
     >
@@ -37,7 +37,6 @@
     class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #portfolio='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="portfolio._isIntersecting"
     >
@@ -59,7 +58,6 @@
     class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #join='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="join._isIntersecting"
     >
@@ -82,7 +80,6 @@
     <div class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #epl='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="epl._isIntersecting">
         <span class="pos-left">04/06</span>
@@ -105,7 +102,6 @@
     class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #pokedex='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="pokedex._isIntersecting"
     >
@@ -128,7 +124,6 @@
     class="project-wrapper d-flex pos-rel"
     appObserveElement 
     #donuthero='intersectionExport' 
-    [isContinuous]="true"
     [threshold]="0.5"
     [class.project-wrapper--is-intersecting]="donuthero._isIntersecting">
         <span class="pos-left">06/06</span>

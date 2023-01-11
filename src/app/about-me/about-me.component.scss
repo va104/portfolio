@@ -26,6 +26,13 @@
     }
 }
 
+.line-header {
+    z-index: 2;
+    position: relative;
+    background: #FFFCF3;
+    padding: 0 40px;
+}
+
 .profile-image.only-desktop {
     &::after {
         content: '';
@@ -35,7 +42,7 @@
         right: -10px;
         top: 10px;
         bottom: -10px;
-        border: 4px solid #ceb0a8;
+        border: 4px solid #FF9900;
         transition: 0.2s ease-in-out;
     }
 
@@ -58,7 +65,7 @@
         top: 15px;
         bottom: -10px;
         opacity: 1;
-        border: 4px solid #000000;
+        border: 4px solid #FF9900;
         transition: 0.2s ease-in-out;
 
         @media (max-width: 450px) {
@@ -66,7 +73,7 @@
             right: -10px;
             top: 10px;
             bottom: -5px;
-            border: 2px solid #000000;
+            border: 2px solid #FF9900;
         }
     }
 
@@ -130,16 +137,48 @@ button:hover {
     text-transform: lowercase;
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
-    opacity: .1;
     font-weight: 900;
     position: relative;
     top: 0;
     left: 0;
-    border-bottom: 2px solid black;
     margin-bottom: 30px;
+    color: #FF9900;
+    border-bottom: 2px solid #ff9900;
+    opacity: .3;
 
     @media (max-width: 400px) {
         font-size: 3rem;
+    }
+}
+
+.text-container{
+    margin-top: 25px;
+
+    img {
+        object-fit: contain;
+        margin-right: 10px;
+        width: 64px;
+
+        @media (max-width: 600px) {
+            float: left;;
+        }
+    }
+
+    @media (max-width: 600px) {
+        display: inline-block;
+    }
+}
+
+.line{
+    width: 85%;
+    height: 4px;
+    background-color: #FF9900;
+    position: absolute;
+    top: 46px;
+    left: -10%;
+    
+    @media (max-width: 1200px) {
+        top: 35px;
     }
 }
 
