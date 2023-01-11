@@ -11,5 +11,4 @@ export class MySkillsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

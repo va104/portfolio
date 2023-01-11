@@ -12,6 +12,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { HighlightHeaderDirective } from './directives/highlight-header.directive';
 import { MyWorkMobileComponent } from './my-work-mobile/my-work-mobile.component';
+import { ObserveElementDirective } from './directives/observe-element.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MyWorkMobileComponent } from './my-work-mobile/my-work-mobile.component
     ContactFormComponent,
     MySkillsComponent,
     HighlightHeaderDirective,
-    MyWorkMobileComponent
+    MyWorkMobileComponent,
+    ObserveElementDirective
   ],
   imports: [
     BrowserModule,

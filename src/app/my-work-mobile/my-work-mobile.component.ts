@@ -11,5 +11,4 @@ export class MyWorkMobileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -9,7 +9,14 @@
         <p class="text-center">This page is samle of my work - please feel free to try them out.</p>
     </div>
     <!-- Ring Of Fire -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div 
+    class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #rof='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="rof._isIntersecting"
+    >
         <span class="pos-right">01/06</span>
         <div class="project-image-right">
             <img style="object-position: right;" src="../../assets/images/projects/portfolio_ringOfFire.png" alt="Join">
@@ -26,7 +33,14 @@
         </div>
     </div>
     <!-- My Portfolio -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div 
+    class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #portfolio='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="portfolio._isIntersecting"
+    >
         <span class="pos-left">02/06</span>
         <div class="project left">
             <h3>My Portfolio</h3>
@@ -41,7 +55,14 @@
         </div>
     </div>
     <!-- Join -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div 
+    class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #join='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="join._isIntersecting"
+    >
         <span class="pos-right">03/06</span>
         <div class="project-image-right">
             <img style="object-position: left;" src="../../assets/images/projects/portfolio_join.png" alt="Join">
@@ -58,7 +79,12 @@
         </div>
     </div>
     <!-- Ell Pollo Loco -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #epl='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="epl._isIntersecting">
         <span class="pos-left">04/06</span>
         <div class="project left">
             <h3>El Pollo Loco</h3>
@@ -75,7 +101,13 @@
         </div>
     </div>
     <!-- Pokedex -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div 
+    class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #pokedex='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="pokedex._isIntersecting">
         <span class="pos-right">05/06</span>
         <div class="project-image-right">
             <img src="../../assets/images/projects/portfolio_pokedex.png" alt="Join">
@@ -91,7 +123,13 @@
         </div>
     </div>
     <!-- Donut Hero -->
-    <div class="project-wrapper d-flex pos-rel">
+    <div 
+    class="project-wrapper d-flex pos-rel"
+    appObserveElement 
+    #donuthero='intersectionExport' 
+    [isContinuous]="true"
+    [threshold]="0.5"
+    [class.project-wrapper--is-intersecting]="donuthero._isIntersecting">
         <span class="pos-left">06/06</span>
         <div class="project left">
             <h3>Donut Hero</h3>
