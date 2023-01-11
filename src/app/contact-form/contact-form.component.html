@@ -1,7 +1,7 @@
-<p>contact-form works!</p>
-<p>contact-form works!</p>
-<p>contact-form works!</p>
-<p>contact-form works!</p>
-<p>contact-form works!</p>
-<p>contact-form works!</p>
-<p>contact-form works!</p>
+<div class="section">
+    <form (submit)="sendMail()" ngNativeValidate #myForm>
+        <input required type="text" name="name" #nameField>
+        <textarea name="message" id="" cols="30" rows="10" #messageField></textarea>
+        <button #sendButton>Senden</button>
+    </form>
+</div>

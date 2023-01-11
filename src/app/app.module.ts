@@ -13,6 +13,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { HighlightHeaderDirective } from './directives/highlight-header.directive';
 import { MyWorkMobileComponent } from './my-work-mobile/my-work-mobile.component';
 import { ObserveElementDirective } from './directives/observe-element.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { ObserveElementDirective } from './directives/observe-element.directive'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
