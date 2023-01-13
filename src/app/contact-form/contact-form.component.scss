@@ -1,120 +1,137 @@
-.diagonal-div {
+// .background{
+//     background: url(../../assets/images/background/rectangle_footer.svg);
+//     background-position: center top;
+//     background-size: 100% auto;
 
+// }
+
+.diagonal-div {
     border-style: solid;
     border-width: 200px 0 0 100vw;
-    border-color: transparent transparent transparent black;
+    border-color: transparent transparent transparent var(--color-black);
 }
 
+button {
+    border-color: var(--color-beige);
+    color: var(--color-beige);
+    width: 255px;
+    transition: 0.1s;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: 700;
+        width: 295px;  
+    }
+}
+
+
+
+
+
 .wrapper-content {
-    background-color: black;
+    background-color: var(--color-black);
+    position: relative;
 
     h2 {
-        color: #FFFCF3;
+        color: var(--color-beige);
         position: relative;
         bottom: 90px;
+         transition: 225ms ease-in-out;
 
-        // transition: all 225ms ease-in-out;
+        &:hover {
+            color: var(--color-orange);
+            cursor: context-menu;
+        }
+
     }
-    .inner {
+    .wrapper-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         h3 {
             font-family: 'Overpass';
-            font-style: normal;
-            font-weight: 700;
             font-size: 32px;
             line-height: 120%;
-            text-align: center;
-            color: var(--color-green);
+            color: var(--color-orange);
             margin-bottom: 16px;
         }
+
         p {
-            font-family: 'Overpass';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 23px;
-            line-height: 120%;
-            text-align: center;
-            color: #FFFCF3;
+            color: var(--color-beige);
             margin-bottom: 48px;
         }
+
         form {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 35px;
+            width: clamp(200px, 180%, 700px);
+
+
             input,
             textarea {
+                width: 100%;
                 outline: none;
                 border: none;
-                width: 620px;
                 font-family: 'Overpass';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 120%;
-                color: #FFFCF3;
+                color: var(--color-beige);
                 transition: all 225ms ease-in-out;
             }
-            input[type=text],
-            input[type=email],
+
             textarea {
-                color: #FFFCF3;
+                min-height: 200px;
+            }
+
+            input[type=text],
+            input[type=mail],
+            textarea {
+                padding: 24px;
+                padding: 16px;
+                color: var(--color-beige);
                 background-color: var(--color-black);
                 border-top: 3px solid var(--color-black);
                 border-left: 3px solid var(--color-black);
                 border-right: 3px solid var(--color-black);
-                border-bottom: 3px solid var(--color-white);
-                padding-inline: 24px;
-                padding-block: 16px;
+                border-bottom: 3px solid var(--color-beige);
             }
-            textarea {
-                min-height: 200px;
-                resize: vertical;
+
+
+            input[type=text]:hover,
+            input[type=mail]:hover,
+            textarea:hover{
+                border: 3px solid var(--color-beige);
             }
-            input[type=email]:focus-visible,
+
             input[type=text]:focus-visible,
+            input[type=mail]:focus-visible,
             textarea:focus-visible {
-                border: 3px solid var(--color-white);
-            }
-            input[type=submit] {
-                cursor: pointer;
-                width: fit-content;
-                background-color: var(--color-black);
-                color: var(--color-white);
-                border: 2px var(--color-white) solid;
-                padding: 20px 60px;
-                margin-bottom: 32px;
-            }
-            input[type=submit]:hover {
-                opacity: 0.8;
-                transform: translateY(-2px);
-            }
-            input[type=submit]:active {
-                background-color: var(--color-white);
-                color: var(--color-black);
-                border: 2px var(--color-black) solid;
+                border: 3px solid var(--color-beige);
             }
         }
     }
-    .wrapper {
-        position: absolute;
-        bottom: 16px;
-        right: 0px + 32px;
-        height: 100px;
-        width: 40px;
-        overflow: hidden;
-    }
-    .arrow {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        animation: arrowUp 2.5s linear 0s infinite normal none;
-    }
-    .arrow:hover {
-        animation-play-state: paused;
-    }
+    // .wrapper {
+    //     position: absolute;
+    //     bottom: 16px;
+    //     right: 0px + 32px;
+    //     height: 100px;
+    //     width: 40px;
+    //     overflow: hidden;
+    // }
+    // .arrow {
+    //     position: absolute;
+    //     bottom: 0px;
+    //     width: 100%;
+    //     animation: arrowUp 2.5s linear 0s infinite normal none;
+    // }
+    // .arrow:hover {
+    //     animation-play-state: paused;
+    // }
 }

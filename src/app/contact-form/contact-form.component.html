@@ -1,30 +1,28 @@
+<!-- <div class="background">
+    <br>
+    <br>
+    <br>
+</div> -->
+
+
 <div class="section diagonal-div"></div>
 <div style="background-color: black;">
     <div class="section wrapper-content">
         <h2>Say Hi!</h2>
-        <div class="inner">
+        <div class="wrapper-form">
             <h3>Want to discuss a new project?</h3>
-            <p>Say hello! let's discuss your ideas and make it happen</p>
+            <p>Say hello! Let's discuss your ideas and make it happen</p>
             <form (submit)="sendMail()" ngNativeValidate #myForm>
-                <input required type="text" name="name" #nameField>
-                <textarea name="message" id="" cols="30" rows="10" #messageField></textarea>
-                <button #sendButton>Senden</button>
+                <input required type="text" name="name" placeholder="Your name" #nameField>
+                <input required type="mail" name="mail" placeholder="Your email" #emailField>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField></textarea>
+                <button #sendButton>Send message</button>
             </form>
         </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    </div>
+    <br>
+    <br>
+    <br>
 </div>
 <!-- <section id="contact">
     <div class="diagonal-div"></div>

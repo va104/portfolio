@@ -16,6 +16,10 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  //Angular Animation für Say Hi Header
+  // soll alle 2 Sekunden seine Farbe von Orange nach hell wechseln
+
   async sendMail() {
     //action="https://vanessa-wuerdinger.de/send_mail/send_mail.php"
     //ftp://f015573b@vanessa-wuerdinger.de/vanessa-wuerdinger.de/assets/libs/send_mail/send_mail.php
@@ -42,5 +46,6 @@ export class ContactFormComponent implements OnInit {
     messageField.disabled = false;
     sendButton.disabled = false;
   }
+
 
 }
