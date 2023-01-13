@@ -12,10 +12,27 @@
         <div class="wrapper-form">
             <h3>Want to discuss a new project?</h3>
             <p>Say hello! Let's discuss your ideas and make it happen</p>
-            <form (submit)="sendMail()" ngNativeValidate #myForm>
-                <input required type="text" name="name" placeholder="Your name" #nameField>
-                <input required type="mail" name="mail" placeholder="Your email" #emailField>
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField></textarea>
+            <form (ngSubmit)="sendMail(myForm)" #myForm="ngForm">
+                <input 
+                    required 
+                    type="text" 
+                    name="textNme" 
+                    placeholder="Your name" 
+                    ngModel>
+                <input 
+                    required 
+                    type="mail" 
+                    name="name" 
+                    placeholder="Your email" 
+                    ngModel>
+                <textarea 
+                    name="message" 
+                    id="" 
+                    cols="30" 
+                    rows="10" 
+                    placeholder="Your message" 
+                    ngModel
+                ></textarea>
                 <button #sendButton>Send message</button>
             </form>
         </div>
