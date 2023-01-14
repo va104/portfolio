@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -13,14 +13,25 @@ export class ContactFormComponent implements OnInit {
   @ViewChild('messageField') messageField: ElementRef; 
   @ViewChild('mail') mail: ElementRef; 
   @ViewChild('sendButton') sendButton: ElementRef; 
-  constructor() { }
+
+  timerColorOrange = false; 
+
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+    this.colorChangeSayHi();
+  }
+  
+  colorChangeSayHi() {
+    setInterval(() => {
+      this.timerColorOrange = !this.timerColorOrange
+    }, 2000);
   }
 
-
-  //Angular Animation für Say Hi Header
-  // soll alle 2 Sekunden seine Farbe von Orange nach hell wechseln
+  labelToTop(label, input) {
+    this.renderer.addClass(label, 'to-top');
+    this.renderer.addClass(input, 'fix-border');
+  }
 
   async sendMail(form: NgForm) {
     //action="https://vanessa-wuerdinger.de/send_mail/send_mail.php"

@@ -24,10 +24,6 @@ button {
     }
 }
 
-
-
-
-
 .wrapper-content {
     background-color: var(--color-black);
     position: relative;
@@ -36,11 +32,15 @@ button {
         color: var(--color-beige);
         position: relative;
         bottom: 90px;
-         transition: 225ms ease-in-out;
+        transition: 225ms ease-in-out;
 
-        &:hover {
+        &.orange {
             color: var(--color-orange);
-            cursor: context-menu;
+            transition: 225ms ease-in-out;
+        }
+         
+         &:hover {
+             cursor: context-menu;
         }
 
     }
@@ -71,6 +71,25 @@ button {
             gap: 35px;
             width: clamp(200px, 180%, 700px);
 
+            div {
+                position: relative;
+                width: 100%;
+
+                label {
+                    color: #757575;
+                    position: absolute;
+                    transform: translate(26%, 80%);
+                    font-size: 18px;
+                    padding: 0 7px;
+                    cursor: auto;
+                    
+                    &.to-top{
+                        animation: labelToTop 225ms ease-in-out forwards;
+                        background: black;
+                        padding: 0 7px;
+                    }
+                }
+            }
 
             input,
             textarea {
@@ -88,6 +107,9 @@ button {
 
             textarea {
                 min-height: 200px;
+                position: relative;
+                z-index: 5;
+                background-color: rgba(0, 0, 0, 0) !important;
             }
 
             input[type=text],
@@ -115,6 +137,10 @@ button {
             textarea:focus-visible {
                 border: 3px solid var(--color-beige);
             }
+
+            .fix-border {
+                border: 3px solid var(--color-beige) !important;
+            }
         }
     }
     // .wrapper {
@@ -134,4 +160,21 @@ button {
     // .arrow:hover {
     //     animation-play-state: paused;
     // }
+}
+
+// input.ng-touched, textarea.ng-touched {
+//     background-color: red !important;
+// }
+
+@keyframes labelToTop {
+    from {
+        transform: translate(26%, 80%);
+    }
+
+    to {
+        transform: translate(10%, -40%);
+        font-size: 16px;
+        color: var(--color-beige);
+        z-index: 10;
+    }
 }

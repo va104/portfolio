@@ -8,31 +8,43 @@
 <div class="section diagonal-div"></div>
 <div style="background-color: black;">
     <div class="section wrapper-content">
-        <h2>Say Hi!</h2>
+        <h2 [ngClass]="{orange: timerColorOrange}">Say Hi!</h2>
         <div class="wrapper-form">
             <h3>Want to discuss a new project?</h3>
             <p>Say hello! Let's discuss your ideas and make it happen</p>
             <form (ngSubmit)="sendMail(myForm)" #myForm="ngForm">
-                <input 
+                <div (click)="labelToTop(labelName, inputName)">
+                    <label #labelName for="name">Your name </label>
+                    <input 
+                    #inputName
                     required 
+                    id="name"
                     type="text" 
-                    name="textNme" 
-                    placeholder="Your name" 
+                    name="textNme"
                     ngModel>
-                <input 
+                </div>
+                <div (click)="labelToTop(labelMail, inputMail)">
+                    <label #labelMail for="mail">Your email</label>
+                    <input 
+                    #inputMail
                     required 
+                    id="mail"
                     type="mail" 
                     name="name" 
-                    placeholder="Your email" 
                     ngModel>
-                <textarea 
+                </div>
+                <div (click)="labelToTop(labelMessage, textareaMessage)">
+                    <label style="padding: 0 3px !important" #labelMessage for="message">Your message</label>
+                    <textarea 
+                    required
+                    #textareaMessage
                     name="message" 
                     id="" 
                     cols="30" 
                     rows="10" 
-                    placeholder="Your message" 
                     ngModel
-                ></textarea>
+                    ></textarea>
+                </div>
                 <button #sendButton>Send message</button>
             </form>
         </div>
