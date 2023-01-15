@@ -128,6 +128,10 @@ button {
     align-items: end;
 }
 
+.align-baseline {
+    align-items: baseline;
+}
+
 .just-between {
     justify-content: space-between;
 }
@@ -206,6 +210,10 @@ button {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.gap-42 {
+    gap: 42px;
 }
 
 .only-desktop:hover {
