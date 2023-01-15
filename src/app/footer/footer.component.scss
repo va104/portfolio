@@ -22,7 +22,7 @@
         transition: 225ms ease-in-out;
 
         &:hover {
-            transform: translateY(-70%);
+            transform: translateY(-50%);
         }
     }
 
@@ -33,22 +33,50 @@
 }
 
 .underline-animation{
-    // border-bottom: 3px solid var(--color-orange);
     position: relative;
 
     &:after {
         content: '';
         display: block;
         position: absolute;
-        right: 0;
         background: var(--color-orange);
         height: 3px;
-        width: 50%;
+        animation: lineBack 0.2s ease forwards;
+    }
+    
+    &:hover:after {
+        animation: lineForwards 0.2s ease forwards;
     }
     
 
     &:hover {
         font-weight: 600;
         cursor: pointer;
+    }
+}
+
+@keyframes lineForwards {
+    from {
+        opacity: 0;
+        right: 70%;
+        width: 50%;
+    }
+    to {
+        opacity: 1;
+        right: 0%;
+        width: 70%;
+    }
+}
+
+@keyframes lineBack {
+    from {
+        opacity: 1;
+        right: 0%;
+        width: 70%;
+    }
+    to {
+        opacity: 0;
+        right: 70%;
+        width: 50%;
     }
 }
