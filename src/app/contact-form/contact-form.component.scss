@@ -21,7 +21,17 @@ button {
         cursor: pointer;
         font-weight: 700;
         width: 295px;  
+        color: var(--color-black);
+        background-color: var(--color-beige);
     }
+}
+
+.warning-message{
+    position: relative;
+    top: 10px;
+    color: var(--color-warning);
+    font-size: 16px;
+    line-height: 19.2px;
 }
 
 .wrapper-content {
@@ -56,11 +66,13 @@ button {
             line-height: 120%;
             color: var(--color-orange);
             margin-bottom: 16px;
+            text-align: center;
         }
 
         p {
             color: var(--color-beige);
             margin-bottom: 48px;
+            text-align: center;
         }
 
         form {
@@ -69,7 +81,7 @@ button {
             justify-content: center;
             align-items: center;
             gap: 35px;
-            width: clamp(200px, 180%, 700px);
+            width: clamp(200px, 90%, 700px);
 
             div {
                 position: relative;
@@ -94,6 +106,7 @@ button {
             input,
             textarea {
                 width: 100%;
+                box-sizing: border-box;
                 outline: none;
                 border: none;
                 font-family: 'Overpass';
@@ -113,8 +126,9 @@ button {
             }
 
             input[type=text],
-            input[type=mail],
-            textarea {
+            input[type=email],
+            textarea,
+            select {
                 padding: 24px;
                 padding: 16px;
                 color: var(--color-beige);
@@ -125,15 +139,14 @@ button {
                 border-bottom: 3px solid var(--color-beige);
             }
 
-
             input[type=text]:hover,
-            input[type=mail]:hover,
+            input[type=email]:hover,
             textarea:hover{
                 border: 3px solid var(--color-beige);
             }
 
             input[type=text]:focus-visible,
-            input[type=mail]:focus-visible,
+            input[type=email]:focus-visible,
             textarea:focus-visible {
                 border: 3px solid var(--color-beige);
             }
@@ -141,30 +154,44 @@ button {
             .fix-border {
                 border: 3px solid var(--color-beige) !important;
             }
+
+            img {
+                position: absolute;
+                transform: translate(-150%, 50%);
+            }
         }
     }
-    // .wrapper {
-    //     position: absolute;
-    //     bottom: 16px;
-    //     right: 0px + 32px;
-    //     height: 100px;
-    //     width: 40px;
-    //     overflow: hidden;
-    // }
-    // .arrow {
-    //     position: absolute;
-    //     bottom: 0px;
-    //     width: 100%;
-    //     animation: arrowUp 2.5s linear 0s infinite normal none;
-    // }
-    // .arrow:hover {
-    //     animation-play-state: paused;
-    // }
 }
 
-// input.ng-touched, textarea.ng-touched {
-//     background-color: red !important;
-// }
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px black inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: var(--color-beige);
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px black inset;/*your box-shadow*/
+    -webkit-text-fill-color: var(--color-beige);
+} 
+
+.disabled {
+    color: #757575 !important;
+}
+
+::ng-deep .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] circle {
+    stroke: var(--color-beige);
+}
+
+.form-sended {
+    border: 3px solid var(--color-beige);
+    padding: 50px;
+
+    p{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0 !important;
+    }
+}
 
 @keyframes labelToTop {
     from {

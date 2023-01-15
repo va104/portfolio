@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+
+  formSended = false; 
+  formSubmitted = false;
+  loadingIdicatior = false; 
+  errorMessage = false;
 
   @ViewChild('myForm') myForm: ElementRef; 
   @ViewChild('nameField') nameField: ElementRef; 
@@ -19,48 +24,57 @@ export class ContactFormComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.colorChangeSayHi();
+    // this.colorChangeSayHi();
   }
-  
+
   colorChangeSayHi() {
     setInterval(() => {
       this.timerColorOrange = !this.timerColorOrange
     }, 2000);
   }
 
-  labelToTop(label, input) {
+  labelToTop(label) {
     this.renderer.addClass(label, 'to-top');
-    this.renderer.addClass(input, 'fix-border');
   }
 
   async sendMail(form: NgForm) {
-    //action="https://vanessa-wuerdinger.de/send_mail/send_mail.php"
-    //ftp://f015573b@vanessa-wuerdinger.de/vanessa-wuerdinger.de/assets/libs/send_mail/send_mail.php
-    console.log('sending mail', form.value);
-    // let nameField = this.nameField.nativeElement;
-    // let messageField = this.messageField.nativeElement;
-    // let mail = this.mail.nativeElement;
-    // let sendButton = this.sendButton.nativeElement;
-    // nameField.disabled = true;
-    // messageField.disabled = true;
-    // sendButton.disabled = true;
     //Ladeanimation anzeigen, dass gesendet wird 
+    this.loadingIdicatior = true;
+    this.formSubmitted = true; 
 
+    //fill information into form
     const fd = new FormData();
     fd.append('name', form.value.name);
     fd.append('message', form.value.message);
-    // fd.append('mail', mail.value);
-    await fetch('https://vanessa-wuerdinger.de/assets/libs/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: fd
-      })
+    const promise =  fetch('https://vanessa-wuerdinger.de/assets/libs/send_mail/send_mail.php',
+    {
+      method: 'POST',
+      body: fd
+    });
 
-      //Text anzeigen, Nachricht gesendet.
-    // nameField.disabled = false;
-    // messageField.disabled = false;
-    // sendButton.disabled = false;
+    let [resp, err] = await this.resolve(promise)
+
+    //setTimeout for user experience (spinner)
+    setTimeout(() => {
+      if(resp) {
+        this.formSended = true;
+      }
+      if(err){
+        this.errorMessage = true;
+      }
+      
+      this.loadingIdicatior = false;
+    }, 2000);
   }
 
-
+  // returns the response/error of the promise
+  async resolve(promise) {
+    try {
+      const response = await promise;
+      return [response, null]
+    } catch (e) {
+      console.log(e);
+      return [null, e];
+    }
+  }
 }
