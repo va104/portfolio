@@ -1,114 +1,66 @@
-<!-- <div class="background">
-    <br>
-    <br>
-    <br>
-</div> -->
-
-<div class="section diagonal-div"></div>
-<div style="background-color: black;">
+<div class="background">
     <div class="section wrapper-content">
+        <!-- <div data-aos="fade-down-left" data-aos-offset="200" class="d-flex just-end p-right-180 arrow">
+            <img src="../../assets/icons/arrow/arrow-middle.svg" alt="Arrow">
+        </div> -->
         <h2 [ngClass]="{orange: timerColorOrange}">Say Hi!</h2>
         <div class="wrapper-form">
             <h3>Want to discuss a new project?</h3>
             <p>Say hello! Let's discuss your ideas and make it happen</p>
             <form *ngIf="!formSubmitted && !errorMessage" (ngSubmit)="sendMail(myForm)" #myForm="ngForm">
                 <div (click)="labelToTop(labelName)">
-                    <label 
-                        #labelName 
-                        for="name">
-                        Your name 
+                    <label #labelName for="name">
+                        Your name
                     </label>
-                    <input 
-                        #inputName="ngModel"
-                        (focus)="labelToTop(labelName)"
-                        required 
-                        id="name"
-                        type="text" 
-                        name="textNme"
-                        [ngClass]="{'fix-border': inputName.touched}"
-                        ngModel>
-                    <img 
-                        src="../../assets/icons/contact_form/excalmationMark.svg" 
-                        alt="excalmationMark"
+                    <input #inputName="ngModel" (focus)="labelToTop(labelName)" required id="name" type="text"
+                        name="textNme" [ngClass]="{'fix-border': inputName.touched}" ngModel>
+                    <img src="../../assets/icons/contact_form/excalmationMark.svg" alt="excalmationMark"
                         *ngIf="!inputName.valid && inputName.touched">
-                    <img 
-                    src="../../assets/icons/contact_form/check.svg" 
-                    alt="Check"
-                    *ngIf="inputName.valid">
-                    <span 
-                        class="warning-message"
-                        *ngIf="!inputName.valid && inputName.touched">
+                    <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="inputName.valid">
+                    <span class="warning-message" *ngIf="!inputName.valid && inputName.touched">
                         Your name is required
                     </span>
                 </div>
                 <div (click)="labelToTop(labelMail)">
                     <label #labelMail for="email">Your email</label>
-                    <input 
-                        (focus)="labelToTop(labelMail)"
-                        #inputMail="ngModel"
-                        required 
-                        id="email"
-                        type="email" 
-                        name="name" 
-                        email
-                        [ngClass]="{'fix-border': inputMail.touched}"
-                        ngModel>
-                    <img 
-                        src="../../assets/icons/contact_form/excalmationMark.svg" 
-                        alt="excalmationMark"
+                    <input (focus)="labelToTop(labelMail)" #inputMail="ngModel" required id="email" type="email"
+                        name="name" email [ngClass]="{'fix-border': inputMail.touched}" ngModel>
+                    <img src="../../assets/icons/contact_form/excalmationMark.svg" alt="excalmationMark"
                         *ngIf="!inputMail.valid && inputMail.touched">
-                    <img 
-                        src="../../assets/icons/contact_form/check.svg" 
-                        alt="Check"
-                        *ngIf="inputMail.valid">
-                    <span 
-                        class="warning-message"
-                        *ngIf="!inputMail.valid && inputMail.touched">
+                    <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="inputMail.valid">
+                    <span class="warning-message" *ngIf="!inputMail.valid && inputMail.touched">
                         Your email is required
                     </span>
                 </div>
                 <div (click)="labelToTop(labelMessage)">
                     <label style="padding: 0 7px 0 3px !important" #labelMessage for="message">Your message</label>
-                    <textarea 
-                        required
-                        #textareaMessage="ngModel"
-                        (focus)="labelToTop(labelMessage)"
-                        name="message" 
-                        id="" 
-                        cols="30" 
-                        rows="10" 
-                        [ngClass]="{'fix-border': textareaMessage.touched}"
-                        ngModel
-                    ></textarea>
-                    <img 
-                        src="../../assets/icons/contact_form/excalmationMark.svg" 
-                        alt="excalmationMark"
+                    <textarea required #textareaMessage="ngModel" (focus)="labelToTop(labelMessage)" name="message"
+                        id="" cols="30" rows="10" [ngClass]="{'fix-border': textareaMessage.touched}"
+                        ngModel></textarea>
+                    <img src="../../assets/icons/contact_form/excalmationMark.svg" alt="excalmationMark"
                         *ngIf="!textareaMessage.valid && textareaMessage.touched">
-                    <img 
-                    src="../../assets/icons/contact_form/check.svg" 
-                    alt="Check"
-                    *ngIf="textareaMessage.valid">
-                    <span 
-                        class="warning-message"
-                        *ngIf="!textareaMessage.valid && textareaMessage.touched">
+                    <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="textareaMessage.valid">
+                    <span class="warning-message" *ngIf="!textareaMessage.valid && textareaMessage.touched">
                         Your message is empty
                     </span>
                 </div>
-                <button [ngClass]="{disabled: !myForm.valid}" [disabled]="!myForm.valid" #sendButton>Send message</button>
+                <button [ngClass]="{disabled: !myForm.valid}" [disabled]="!myForm.valid" #sendButton>Send
+                    message</button>
             </form>
             <div *ngIf="formSubmitted && !errorMessage" class="form-sended d-flex d-column just-center align-center">
                 <p *ngIf="loadingIdicatior">Your request is being forwarded</p>
                 <br *ngIf="loadingIdicatior">
                 <mat-spinner *ngIf="loadingIdicatior"></mat-spinner>
                 <p *ngIf="!loadingIdicatior && formSended">
-                    Thank you for your message! 
-                    <br> 
-                    <br> 
-                    I will get back to you as soon as possible.</p>
+                    Thank you for your message!
+                    <br>
+                    <br>
+                    I will get back to you as soon as possible.
+                </p>
             </div>
             <div *ngIf="!formSended && errorMessage" class="form-sended d-flex d-column just-center align-center">
                 <p *ngIf="errorMessage">
-                    Oh no! The message could not be forwarded. 
+                    Oh no! The message could not be forwarded.
                     Please try again later or send me an email: mail@vanessa-wuerdinger.de
                     <br>
                     <br>
@@ -116,6 +68,9 @@
                 </p>
             </div>
         </div>
+        <div class="arrow-up">
+            <img src="../../assets/icons/arrow/arrow-up.svg" alt="arrowHome">
+            <img src="../../assets/icons/arrow/arrow-wo-head.svg" alt="arrowHome">
+        </div>
     </div>
-    <app-footer></app-footer>
 </div>

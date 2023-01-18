@@ -1,12 +1,22 @@
+.footer-wrapper {
+    width: 100%;
+    background-color: var(--color-black);
+}
+
 .section {
     background-color: var(--color-black);
     color: var(--color-beige);
-    margin-top: 60px;
     padding-bottom: 60px;
+    padding-top: 60px;
 
     h3 {
         font-weight: 900;
-        margin-bottom: 3px
+        margin-bottom: 3px;
+        margin-top: 0 !important;
+        
+        @media (max-width: 700px) {
+            margin: 20px 0 !important;
+        }
     }
 
     span {
@@ -14,6 +24,10 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 120%;
+        
+        @media (max-width: 500px) {
+            font-size: 16px;
+        }
     }
 
 
@@ -29,6 +43,10 @@
     p{
         font-size: 16px;
         margin-top: 20px;
+
+        @media (max-width: 700px) {
+            margin: 16px 0 !important;
+        }
     }
 }
 
@@ -78,5 +96,17 @@
         opacity: 0;
         right: 70%;
         width: 50%;
+    }
+}
+
+.onlyMobile {
+    @media (min-width: 700px) {
+        display: none !important;
+    }
+}
+
+.onlyDesktop {
+    @media (max-width: 700px) {
+        display: none !important;
     }
 }

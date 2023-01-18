@@ -12,19 +12,12 @@ export class ContactFormComponent implements OnInit {
   formSubmitted = false;
   loadingIdicatior = false; 
   errorMessage = false;
-
-  @ViewChild('myForm') myForm: ElementRef; 
-  @ViewChild('nameField') nameField: ElementRef; 
-  @ViewChild('messageField') messageField: ElementRef; 
-  @ViewChild('mail') mail: ElementRef; 
-  @ViewChild('sendButton') sendButton: ElementRef; 
-
   timerColorOrange = false; 
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    // this.colorChangeSayHi();
+    this.colorChangeSayHi();
   }
 
   colorChangeSayHi() {

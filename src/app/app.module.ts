@@ -16,6 +16,8 @@ import { ObserveElementDirective } from './directives/observe-element.directive'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MainPageComponent } from './main-page/main-page.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MySkillsComponent,
     HighlightHeaderDirective,
     MyWorkMobileComponent,
-    ObserveElementDirective
+    ObserveElementDirective,
+    MainPageComponent,
+    NavigationMenuComponent
   ],
   imports: [
     BrowserModule,
