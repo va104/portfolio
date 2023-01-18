@@ -1,4 +1,4 @@
-<div class="header-container section d-flex just-center">
+<div id="home" class="header-container section d-flex just-center">
     <div data-aos="zoom-in" data-aos-delay="200" class="header">
         <h1>Frontend Developer</h1>
         <div class="d-flex just-evenly align-center">
@@ -7,12 +7,12 @@
         </div>
     </div>
     <div data-aos="zoom-in" data-aos-delay="200" class="button-only-mobile">
-        <button><a href="#contact">Send a message</a></button>
+        <button (click)="scrollTo('contact')">Send a message</button>
     </div>
     <div class="header-contact">
         <span class="contact-only-desktop">mail@vanessa-wuerdinger.de</span>
         <div class="arrow-container">
-            <span class="arrow"></span>
+            <span (click)="scrollTo('about')" class="arrow"></span>
             <span class="d-flex just-center align-center">Scroll <br> down</span>
         </div>
     </div>

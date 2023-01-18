@@ -260,6 +260,10 @@ input:-webkit-autofill:focus {
     margin-right: 5%;
     cursor: pointer;
     
+    @media (max-width: 1150px) {
+        margin-right: 10%;
+    }
+    
     &:hover img:first-child {
         transform: translateY(-22px);
         transition: 0.255s ease-in-out;
@@ -275,6 +279,12 @@ input:-webkit-autofill:focus {
     }
 }
 
+.visible-only-desktop {
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
 @keyframes labelToTop {
     from {
         transform: translate(26%, 80%);
@@ -287,3 +297,4 @@ input:-webkit-autofill:focus {
         z-index: 10;
     }
 }
+

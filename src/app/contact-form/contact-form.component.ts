@@ -1,5 +1,6 @@
-import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ScrollingService } from '../scrolling.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +15,7 @@ export class ContactFormComponent implements OnInit {
   errorMessage = false;
   timerColorOrange = false; 
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private scrolling: ScrollingService) { }
 
   ngOnInit(): void {
     this.colorChangeSayHi();
@@ -69,5 +70,9 @@ export class ContactFormComponent implements OnInit {
       console.log(e);
       return [null, e];
     }
+  }
+
+  scrollTo(elementId: string) {
+      this.scrolling.scrollTo(elementId);
   }
 }

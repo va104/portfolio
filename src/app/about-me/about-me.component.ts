@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollingService } from '../scrolling.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrolling: ScrollingService) { }
 
   ngOnInit(): void {
   }
 
+  scrollTo(elementId: string) {
+    this.scrolling.scrollTo(elementId);
+  }
 }
