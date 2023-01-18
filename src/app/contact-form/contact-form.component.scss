@@ -258,6 +258,8 @@ input:-webkit-autofill:focus {
     right: 0;
     position: absolute;
     margin-right: 5%;
+    right: -15px;
+    bottom: 20px;
     cursor: pointer;
     
     @media (max-width: 1150px) {

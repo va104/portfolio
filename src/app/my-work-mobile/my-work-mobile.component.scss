@@ -1,16 +1,6 @@
 @import url("../styles/keyframes.css");
 
 
-.arrow {
-    img {
-        height: 210px;
-
-        @media (max-width: 500px) {
-            height: 115px;
-        }
-    }
-}
-
 h2 {
     margin: 0.83rem 0;
     transition: 0.25s;
@@ -261,28 +251,3 @@ button:hover {
         width: 135px;
       }
 }
-
-.p-left-180 {
-    @media (max-width: 600px) {
-        padding-left: 100px;
-    }
-
-    @media (max-width: 400px) {
-        padding-left: 40px;
-    }
-}
-
-.p-bottom-60 {
-    @media (max-width: 500px) {
-        padding-bottom: 20px;
-        ;
-    }
-}
-
-.p-top-100 {
-    @media (max-width: 500px) {
-        padding-top: 40px;
-        ;
-    }
-}
-

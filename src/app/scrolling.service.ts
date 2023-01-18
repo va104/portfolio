@@ -6,10 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollingService {
 
+  offsetScrolling = 100;
+
   constructor(private viewportScroller: ViewportScroller) { }
 
-  scrollTo(elementId: string) {
-    this.viewportScroller.setOffset([0,100]);
+  scrollTo(elementId: string, addOffset?: number) {
+    if(addOffset) {
+      this.offsetScrolling = addOffset;
+    }
+    this.viewportScroller.setOffset([0, this.offsetScrolling]);
 
     setTimeout(() => {
       this.viewportScroller.scrollToAnchor(elementId);

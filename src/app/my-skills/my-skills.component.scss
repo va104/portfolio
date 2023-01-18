@@ -63,6 +63,16 @@ h2 {
     }
 }
 
+.arrow {
+    img {
+        height: 210px;
+
+        @media (max-width: 500px) {
+            height: 115px;
+        }
+    }
+}
+
 .grid-child {
     align-self: center;
     justify-self: center;
@@ -103,5 +113,29 @@ h2 {
     .item8 {
         grid-area: b;
         align-self: center;
+    }
+}
+
+.p-left-180 {
+    @media (max-width: 600px) {
+        padding-left: 100px;
+    }
+
+    @media (max-width: 400px) {
+        padding-left: 40px;
+    }
+}
+
+.p-bottom-60 {
+    @media (max-width: 500px) {
+        padding-bottom: 20px;
+        ;
+    }
+}
+
+.p-top-100 {
+    @media (max-width: 500px) {
+        padding-top: 40px;
+        ;
     }
 }

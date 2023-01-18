@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollingService } from '../scrolling.service';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationMenuComponent implements OnInit {
 
-  constructor() { }
+  toggleMenu = false;
+   timerColorOrange = false; 
+
+  constructor(private scrolling: ScrollingService) { }
 
   ngOnInit(): void {
+    this.colorChangeSayHi();
   }
 
+  openMenu() {
+    this.toggleMenu = !this.toggleMenu
+  }
+  
+  colorChangeSayHi() {
+    setInterval(() => {
+      this.timerColorOrange = !this.timerColorOrange
+    }, 2000);
+  }
+  
+  // add additional Paremeter because of the padding in the skill section
+  scrollTo(elementId: string, offset?: number) {
+    setTimeout(() => {
+      this.toggleMenu = !this.toggleMenu
+    }, 200);
+    this.scrolling.scrollTo(elementId, offset);
+  }
 }
