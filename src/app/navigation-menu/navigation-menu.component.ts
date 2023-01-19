@@ -9,7 +9,8 @@ import { ScrollingService } from '../scrolling.service';
 export class NavigationMenuComponent implements OnInit {
 
   toggleMenu = false;
-   timerColorOrange = false; 
+  timerColorOrange = false; 
+  isMobile = false; 
 
   constructor(private scrolling: ScrollingService) { }
 
@@ -17,8 +18,23 @@ export class NavigationMenuComponent implements OnInit {
     this.colorChangeSayHi();
   }
 
-  openMenu() {
-    this.toggleMenu = !this.toggleMenu
+  openCloseMenu() {
+    const body = document.getElementsByTagName('body')[0];
+    this.isMobile = false;
+    this.toggleMenu = !this.toggleMenu;
+    if(window.innerWidth <= 500) {
+      this.isMobile = true;
+    }
+
+    if(this.isMobile && this.toggleMenu) {
+      body.style.overflowY = "hidden";
+      console.log('hidden')
+    }
+    
+    if(!this.toggleMenu) {
+      body.style.overflowY = "unset";
+      console.log('unset')
+    }
   }
   
   colorChangeSayHi() {
@@ -30,8 +46,8 @@ export class NavigationMenuComponent implements OnInit {
   // add additional Paremeter because of the padding in the skill section
   scrollTo(elementId: string, offset?: number) {
     setTimeout(() => {
-      this.toggleMenu = !this.toggleMenu
-    }, 200);
+      this.openCloseMenu();
+    }, 300);
     this.scrolling.scrollTo(elementId, offset);
   }
 }
