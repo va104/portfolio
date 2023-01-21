@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "about": "Über",
+        "skills": "Kenntnisse",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt",
+        "hello": "Hallo!"
+    },
+    "header": {
+        "title": "Frontend Entwicklerin",
+        "message": "Nachricht senden",
+        "scroll1": "runter",
+        "scroll2": "scrollen"
+    },
+    "about": {
+        "title": "Über mich",
+        "subtitle": "Über mich",
+        "text1": "Ich bin eine 27-jährige Frontend-Entwicklerin mit Erfahrung in der Entwicklung von Webanwendungen mit JavaScript & Angular. Bisher habe ich als Business-Intelligence-Beraterin gearbeitet und mir Kenntnisse in SQL, MDX und Datenbankverwaltung angeeignet. Mir wurde jedoch bald klar, dass meine Leidenschaft in der Webentwicklung liegt - hier ist meine Geschichte:",
+        "text2": "Während meines Nebenjobs in einer Seifenmanufaktur habe ich bei der Neugestaltung des Webshops meine Leidenschaft für Webentwicklung und Webdesign entdeckt. Ich wurde von meiner Familie und meinen Freunden unterstützt, meine Leidenschaft zum Beruf zu machen. Daher habe ich angefangen, an privaten Projekten zu arbeiten, aber ich habe schnell gemerkt, dass ich es ohne professionelle Unterstützung neben meiner Vollzeittätigkeit als Beraterin nicht schaffen würde.",
+        "text3": "Um mein Ziel zu erreichen, beschloss ich also Frontend-Entwicklerin zu werden und einer professionellen Ausbildung nachzugehen. Hier habe ich sowohl alleine als auch im Team an verschiedenen Projekten gearbeitet. Durch diese intensive Ausbildung konnte ich schnell Erfahrungen sammeln und mein Wissen vertiefen.",
+        "text4": "Ich habe es geschafft und ich freue mich darauf, meine Karierre mit einem Job in einer Webentwickler-Position fortzusetzen. Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, zögern Sie bitte nicht, mich zu kontaktieren!",
+        "button": "Kontakt"
+    },
+    "skills": "Kenntnisse",
+    "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Auf dieser Seite finden Sie einige Beispiele meiner Arbeit - probieren Sie sie gerne aus.",
+        "try": "Test",
+        "rofText": "Eine kleine Spiel-App, inspiriert vom beliebten Trinkkartenspiel. Teilen Sie das Spiel mit Ihren Freunden und haben Sie Spaß!",
+        "eplText": "Ein Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+        "joinText": "Ein vom Kanban-System inspirierter Task-Manager. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop oder weisen Sie Benutzer und Kategorien zu.",
+        "pokedexText": "Basierend auf der PokéAPI-Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+        "donutText": "Diese Lieferservice-Website wurde von Lieferando inspiriert. Schwerpunkt dieses Projekts ist die Simulation eines einfachen Online-Shopping-Prozesses."
+    },
+    "contact": {
+        "header": "Kontakt aufnehmen!",
+        "contactHeader": "Haben Sie ein neues Projekt?",
+        "subheader": "Schreiben Sie mir und realisieren wir gemeinsam Ihre Ideen!",
+        "name": "Name",
+        "nameFailure": "Bitte Namen eingeben",
+        "mail": "E-Mail",
+        "mailFailure": "Bitte E-Mail angeben",
+        "message": "Nachricht",
+        "messageFailure": "Die Nachricht ist leer",
+        "sendMessage": "Nachricht senden",
+        "sendedMessage": "Die Nachricht wird weitergeleitet.",
+        "sendedText1": "Vielen Dank für die Nachricht!",
+        "sendedText2": "Ich werde mich so schnell wie möglich bei Ihnen melden.",
+        "sendedText3": "Oh nein! Die Nachricht konnte nicht weitergeleitet werden. Bitte probieren Sie es später nochmal oder schreiben eine Mail an: mail@vanessa-wuerdinger.de",
+        "sendedText4": "Vielen Dank!"
+    },
+    "legal": "Datenschutz"
+}

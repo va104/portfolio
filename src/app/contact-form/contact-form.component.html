@@ -3,14 +3,14 @@
         <!-- <div data-aos="fade-down-left" data-aos-offset="200" class="d-flex just-end p-right-180 arrow">
             <img src="../../assets/icons/arrow/arrow-middle.svg" alt="Arrow">
         </div> -->
-        <h2 [ngClass]="{orange: timerColorOrange}">Say Hi!</h2>
+        <h2 [ngClass]="{orange: timerColorOrange}">{{ 'contact.header' | translate }}</h2>
         <div class="wrapper-form">
-            <h3>Want to discuss a new project?</h3>
-            <p>Say hello! Let's discuss your ideas and make it happen</p>
+            <h3>{{ 'contact.contactHeader' | translate }}</h3>
+            <p>{{ 'contact.subheader' | translate }}</p>
             <form *ngIf="!formSubmitted && !errorMessage" (ngSubmit)="sendMail(myForm)" #myForm="ngForm">
                 <div (click)="labelToTop(labelName)">
                     <label #labelName for="name">
-                        Your name
+                        {{ 'contact.name' | translate }}
                     </label>
                     <input #inputName="ngModel" (focus)="labelToTop(labelName)" required id="name" type="text"
                         name="textNme" [ngClass]="{'fix-border': inputName.touched}" ngModel>
@@ -18,22 +18,22 @@
                         *ngIf="!inputName.valid && inputName.touched">
                     <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="inputName.valid">
                     <span class="warning-message" *ngIf="!inputName.valid && inputName.touched">
-                        Your name is required
+                        {{ 'contact.nameFailure' | translate }}
                     </span>
                 </div>
                 <div (click)="labelToTop(labelMail)">
-                    <label #labelMail for="email">Your email</label>
+                    <label #labelMail for="email">{{ 'contact.mail' | translate }}</label>
                     <input (focus)="labelToTop(labelMail)" #inputMail="ngModel" required id="email" type="email"
                         name="name" email [ngClass]="{'fix-border': inputMail.touched}" ngModel>
                     <img src="../../assets/icons/contact_form/excalmationMark.svg" alt="excalmationMark"
                         *ngIf="!inputMail.valid && inputMail.touched">
                     <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="inputMail.valid">
                     <span class="warning-message" *ngIf="!inputMail.valid && inputMail.touched">
-                        Your email is required
+                        {{ 'contact.mailFailure' | translate }}
                     </span>
                 </div>
                 <div (click)="labelToTop(labelMessage)">
-                    <label style="padding: 0 7px 0 3px !important" #labelMessage for="message">Your message</label>
+                    <label style="padding: 0 7px 0 3px !important" #labelMessage for="message">{{ 'contact.message' | translate }}</label>
                     <textarea required #textareaMessage="ngModel" (focus)="labelToTop(labelMessage)" name="message"
                         id="" cols="30" rows="10" [ngClass]="{'fix-border': textareaMessage.touched}"
                         ngModel></textarea>
@@ -41,30 +41,29 @@
                         *ngIf="!textareaMessage.valid && textareaMessage.touched">
                     <img src="../../assets/icons/contact_form/check.svg" alt="Check" *ngIf="textareaMessage.valid">
                     <span class="warning-message" *ngIf="!textareaMessage.valid && textareaMessage.touched">
-                        Your message is empty
+                        {{ 'contact.messageFailure' | translate }}
                     </span>
                 </div>
-                <button [ngClass]="{disabled: !myForm.valid}" [disabled]="!myForm.valid" #sendButton>Send
-                    message</button>
+                <button [ngClass]="{disabled: !myForm.valid}" [disabled]="!myForm.valid" #sendButton>
+                    {{ 'contact.sendMessage' | translate }}</button>
             </form>
             <div *ngIf="formSubmitted && !errorMessage" class="form-sended d-flex d-column just-center align-center">
-                <p *ngIf="loadingIdicatior">Your request is being forwarded</p>
+                <p *ngIf="loadingIdicatior">{{ 'contact.sendedMessage' | translate }}</p>
                 <br *ngIf="loadingIdicatior">
                 <mat-spinner *ngIf="loadingIdicatior"></mat-spinner>
                 <p *ngIf="!loadingIdicatior && formSended">
-                    Thank you for your message!
+                    {{ 'contact.sendedText1' | translate }} 
                     <br>
                     <br>
-                    I will get back to you as soon as possible.
+                    {{ 'contact.sendedText2' | translate }} 
                 </p>
             </div>
             <div *ngIf="!formSended && errorMessage" class="form-sended d-flex d-column just-center align-center">
                 <p *ngIf="errorMessage">
-                    Oh no! The message could not be forwarded.
-                    Please try again later or send me an email: mail@vanessa-wuerdinger.de
+                    {{ 'contact.sendedText3' | translate }} 
                     <br>
                     <br>
-                    Thank you!
+                    {{ 'contact.sendedText4' | translate }} 
                 </p>
             </div>
         </div>

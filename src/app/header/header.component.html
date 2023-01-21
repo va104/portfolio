@@ -1,19 +1,19 @@
 <div id="home" class="header-container section d-flex just-center">
     <div data-aos="zoom-in" data-aos-delay="200" class="header">
-        <h1>Frontend Developer</h1>
+        <h1>{{ 'header.title' | translate }}</h1>
         <div class="d-flex just-evenly align-center">
             <div class="line"></div>
             <span class="name">Vanessa Würdinger</span>
         </div>
     </div>
     <div data-aos="zoom-in" data-aos-delay="200" class="button-only-mobile">
-        <button (click)="scrollTo('contact')">Send a message</button>
+        <button (click)="scrollTo('contact')">{{ 'header.message' | translate }}</button>
     </div>
     <div class="header-contact">
         <span class="contact-only-desktop">mail@vanessa-wuerdinger.de</span>
         <div class="arrow-container">
             <span (click)="scrollTo('about')" class="arrow"></span>
-            <span class="d-flex just-center align-center">Scroll <br> down</span>
+            <span class="d-flex just-center align-center">{{ 'header.scroll1' | translate }} <br> {{ 'header.scroll2' | translate }}</span>
         </div>
     </div>
 </div>

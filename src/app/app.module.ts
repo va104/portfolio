@@ -18,6 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -41,7 +49,16 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        defaultLanguage: 'en',
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

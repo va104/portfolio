@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "about": "About me",
+        "skills": "My skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "hello": "Say Hi!"
+    },
+    "header": {
+        "title": "Frontend Developer",
+        "message": "Send a message",
+        "scroll1": "Scroll",
+        "scroll2": "down"
+    },
+    "about": {
+        "title": "About me",
+        "subtitle": "About",
+        "text1": "I am a 27-year-old frontend developer with experience in developing web applications with JavaScript & Angular. So far I have worked as business intelligence consultant acquiring skills in SQL, MDX and database administration. However, i realized at a certain point, that my passion lies with in web development - here is my story:",
+        "text2": "During my side job in a soap manufacory I discovered my passion for web development and web design while working on the new webshop. I was supported by my family and friends to make my passion my profession. Therefore I started working on private projects but I soon realized that I would not be able to do it without professional support besides my full time job as consultant.",
+        "text3": "So I decided to become a frontend developer and take professional training to reach my goal. Here I have worked both on my own and in a team on various projects. This intensive training allowed me to quickly gain experience and deepen my knowledge.",
+        "text4": "I made it and I am looking forward to continuing my developer career with a job in a webdeveloper position. If you think I'd be a good match for your projects, please do not hesitate to contact me!",
+        "button": "Let's talk"
+    },
+    "skills": "My skills",
+    "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "This page shows some samples of my work - please feel free to try them out.",
+        "try": "Try out",
+        "rofText": "A small game-app inspired by the popular drinking card game. Share the game with your friends and have fun!",
+        "eplText": "A Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "joinText": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "pokedexText": "Based on the PokéAPI library that provides and catalogues pokémon information.",
+        "donutText": "This delivery service website was inspired by Lieferando. Main focus of this project is the simulation of a easy online shopping process."
+    },
+    "contact": {
+        "header": "Say Hi!",
+        "contactHeader": "Want to discuss a new project?",
+        "subheader": "Say hello and let's realize your ideas together!",
+        "name": "Your name",
+        "nameFailure": "Your name is required",
+        "mail": "Your email",
+        "mailFailure": "Your email is required",
+        "message": "Your message",
+        "messageFailure": "Your message is empty",
+        "sendMessage": "Send message",
+        "sendedMessage": "Your request is being forwarded",
+        "sendedText1": "Thank you for your message!",
+        "sendedText2": "I will get back to you as soon as possible.",
+        "sendedText3": "Oh no! The message could not be forwarded. Please try again later or send me an email: mail@vanessa-wuerdinger.de",
+        "sendedText4": "Thank you!"
+    },
+    "legal": "Legal notice"
+}

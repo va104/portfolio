@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -12,11 +13,16 @@ export class NavigationMenuComponent implements OnInit {
   toggleMenu = false;
   timerColorOrange = false; 
   isMobile = false; 
+  translation: TranslateService;
 
-  constructor(private scrolling: ScrollingService, private router: Router) { }
+  constructor(
+    private scrolling: ScrollingService, 
+    private router: Router,
+    private translate : TranslateService) { }
 
   ngOnInit(): void {
     this.colorChangeSayHi();
+    this.translation = this.translate; 
   }
 
   openCloseMenu() {
