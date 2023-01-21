@@ -45,9 +45,12 @@ export class NavigationMenuComponent implements OnInit {
   
   // add additional Paremeter because of the padding in the skill section
   scrollTo(elementId: string, offset?: number) {
+    this.scrolling.scrollTo(elementId, offset);
+  }
+
+  closeMenu(){
     setTimeout(() => {
       this.openCloseMenu();
     }, 300);
-    this.scrolling.scrollTo(elementId, offset);
   }
 }

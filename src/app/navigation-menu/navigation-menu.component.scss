@@ -3,14 +3,18 @@ h3 {
     font-weight: 900;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .opacity {
     opacity: 0;
     transform: scale(0.8);
-    animation: opacityas 1s ease;
+    animation: startOpacity 1s ease;
     animation-fill-mode: forwards;
 }
 
-@keyframes opacityas {
+@keyframes startOpacity {
     0% {
         opacity: 0;
     }

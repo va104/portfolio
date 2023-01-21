@@ -1,6 +1,6 @@
 <div class="menu-wrapper d-flex just-center opacity">
     <div class="section menu">
-        <h3 >[V.W]</h3>
+        <h3 routerLink="/" (click)="scrollTo('home')" class="logo">[V.W]</h3>
         <div [ngClass]="{'open': toggleMenu, 'closed': !toggleMenu}" (click)="openCloseMenu()" class="wrapper-menu">
             <div class="line-menu half start"></div>
             <div class="line-menu"></div>
@@ -11,10 +11,10 @@
 <div [ngClass]="{'open-menu': toggleMenu}" class="nav" style="height: 100vh">
     <div class="pos-rel">
         <nav class="d-flex d-column align-center just-evenly">
-            <div class="nav-link"><a (click)="scrollTo('about')">About me</a></div>
-            <div class="nav-link"><a (click)="scrollTo('skills', 180)">My skills</a></div>
-            <div class="nav-link"><a (click)="scrollTo('myWork')">Portfolio</a></div>
-            <div style="margin-bottom: 0;" class="nav-link"><a (click)="scrollTo('contact')">Contact</a></div>
+            <div class="nav-link"><a (click)="scrollTo('about'); closeMenu()">About me</a></div>
+            <div class="nav-link"><a (click)="scrollTo('skills', 180); closeMenu()">My skills</a></div>
+            <div class="nav-link"><a (click)="scrollTo('myWork'); closeMenu()">Portfolio</a></div>
+            <div style="margin-bottom: 0;" class="nav-link"><a (click)="scrollTo('contact'); closeMenu()">Contact</a></div>
         </nav>
         <div [ngClass]="{'open-menu': toggleMenu}" class="background">
         </div>

@@ -28,6 +28,11 @@ h2 {
     }
 }
 
+.background {
+    background-color: var(--color-beige);
+    overflow: hidden;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -76,19 +81,30 @@ h2 {
 .grid-child {
     align-self: center;
     justify-self: center;
-
+    cursor: context-menu;
+        
     p {
         font-size: 16px;
         line-height: 19.2px;
         text-align: center;
         font-weight: 700;
-
+        transition: all 100ms ease-in-out;
+        
         @media (max-width: 380px) {
             font-size: 14px;
             margin-bottom: 10px;
         }
     }
 
+    &:hover p{
+        transition: all 100ms ease-in-out;
+        color: var(--color-orange);
+    }
+
+    &:hover img {
+        animation: bounceIcon 400ms cubic-bezier(0, 0.82, 0.05, 0.08);
+    }
+    
     @media (max-width: 500px) {
         display: flex;
         flex-direction: column;
@@ -106,6 +122,16 @@ h2 {
             margin-bottom: 8px;
         }
     }
+}
+
+@keyframes bounceIcon {
+    0%   { transform: scale(0.9) translate(0, 0); }
+    25%  { transform: scale(0.9) translate(70%, 0); }
+    40%  { transform: scale(0.7) translate(70%, -5%); }
+    50%  { transform: scale(0.7) translate(0, -5%); }
+    75%  { transform: scale(0.7) translate(-70%, -5%); }
+    90%  { transform: scale(0.9) translate(-70%, 0); }
+    100% { transform: scale(1) translate(0, 0); }
 }
 
 @media (max-width: 1200px) {
