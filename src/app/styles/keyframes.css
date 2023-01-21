@@ -5,7 +5,7 @@
     }
 
     to {
-        transform: rotate(-140deg);
+        transform: rotate(-120deg);
         scale: 1.5;
     }
 }
@@ -38,7 +38,7 @@
     }
 
     to {
-        transform: rotate(140deg);
+        transform: rotate(120deg);
         scale: 1.5;
     }
 }

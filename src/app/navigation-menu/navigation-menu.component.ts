@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class NavigationMenuComponent implements OnInit {
   timerColorOrange = false; 
   isMobile = false; 
 
-  constructor(private scrolling: ScrollingService) { }
+  constructor(private scrolling: ScrollingService, private router: Router) { }
 
   ngOnInit(): void {
     this.colorChangeSayHi();
@@ -49,6 +50,7 @@ export class NavigationMenuComponent implements OnInit {
   }
 
   closeMenu(){
+    this.router.navigate(['/'])
     setTimeout(() => {
       this.openCloseMenu();
     }, 300);
