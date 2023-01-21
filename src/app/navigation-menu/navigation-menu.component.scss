@@ -3,6 +3,29 @@ h3 {
     font-weight: 900;
 }
 
+.opacity {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: opacityas 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityas {
+    0% {
+        opacity: 0;
+    }
+    
+    70% {
+        opacity: 0;
+        transform: scale(0.8);
+        
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .menu-wrapper {
     background-color: var(--color-beige);
     width: 100%;
@@ -10,11 +33,13 @@ h3 {
     position: fixed;
     top: 0;
     z-index: 10;
+    transition: transform 225ms ease-in-out 300ms;
 }
 
 .mail {
-        transform: translateY(300%);
+    transform: translateY(300%);
     transition: transform 225ms ease-in-out 300ms;
+    cursor: context-menu;
     
     &.open-menu{
         transform: none;
@@ -172,10 +197,9 @@ nav {
 
 h2 {
     color: var(--color-beige);
-    cursor: pointer;
+    cursor: context-menu;
     transform: translateY(300%);
-    transition: color 225ms ease-in-out;
-    transition: transform 225ms ease-in-out 200ms;
+    transition: color 225ms ease-in-out, transform 225ms ease-in-out 200ms;
     
     &.open-menu{
         transform: none;
@@ -197,6 +221,132 @@ h2 {
     }
 }
 
+// Menu
+.wrapper-menu {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 225ms ease-out;
+}
+
+  .wrapper-menu.open {
+    transform: rotate(45deg);  
+  }
+  
+  .wrapper-menu.closed {
+    transition: transform 225ms ease-out 225ms;
+    transform: rotate(0deg);  
+  }
+  
+  .line-menu {
+    background-color: var(--color-black);
+    width: 100%;
+    height: 4px;
+  }
+  
+  .open .line-menu.half {
+    width: 50%;
+  }
+
+  .closed .line-menu.half {
+    transition: width 225ms ease-out 225ms;;
+    width: 100%;
+  }
+  
+  .line-menu.start {
+    transition: transform 225ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    align-self: flex-end;
+    transform-origin: left;
+}
+
+.open .line-menu.start {
+      transition: transform 225ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform: rotate(-90deg) translateX(3px);
+      animation: startLineForwards 225ms ease 225ms;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes startLineForwards {
+        from {
+            transform: rotate(-90deg) translateX(3px);
+            
+        }
+        to {
+            transform: rotate(-90deg) translateX(-12px)
+      }
+  }
+
+  
+.closed .line-menu.start {
+    animation: startLineBackwards 200ms ease, startRotateBack 225ms ease-in-out 100ms;
+}
+
+@keyframes startLineBackwards {
+    from {
+        transform: rotate(-90deg) translateX(-12px);
+        
+    }
+    to {
+        transform: rotate(-90deg) translateX(3px)
+    }
+}
+
+@keyframes startRotateBack {
+    from {
+        transform: rotate(-90deg) translateX(3px)
+    }
+    to {
+        transform: rotate(0deg) translateX(3px)
+    }
+}
+  
+.closed .line-menu.end {
+    animation: endLineBackwards 200ms ease, endRotateBack 225ms ease-in-out 100ms;
+
+  }
+
+  @keyframes endLineBackwards {
+    from {
+        transform: rotate(-90deg) translateX(12px);
+        
+    }
+    to {
+        transform: rotate(-90deg) translateX(-3px)
+    }
+}
+
+@keyframes endRotateBack {
+    from {
+        transform: rotate(-90deg) translateX(-3px)
+    }
+    to {
+        transform: rotate(0deg) translateX(-3px)
+    }
+}
+
+  .line-menu.end {
+    transition: transform 225ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: right;
+  }
+  
+  .open .line-menu.end {
+    transform: rotate(-90deg) translateX(-3px);
+    animation: endLineForwards 225ms ease 225ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes endLineForwards {
+      from {
+          transform: rotate(-90deg) translateX(-3px);
+          
+      }
+      to {
+          transform: rotate(-90deg) translateX(12px)
+    }
+}
 
 @media (max-width: 1200px) {
     .nav-link {

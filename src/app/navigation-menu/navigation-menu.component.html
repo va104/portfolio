@@ -1,7 +1,11 @@
-<div class="menu-wrapper d-flex just-center">
+<div class="menu-wrapper d-flex just-center opacity">
     <div class="section menu">
-        <h3>[V.W]</h3>
-        <img (click)="openCloseMenu()" src="../../assets/icons/burger_menu/burger.svg" alt="Menu">
+        <h3 >[V.W]</h3>
+        <div [ngClass]="{'open': toggleMenu, 'closed': !toggleMenu}" (click)="openCloseMenu()" class="wrapper-menu">
+            <div class="line-menu half start"></div>
+            <div class="line-menu"></div>
+            <div class="line-menu half end"></div>
+          </div>
     </div>
 </div>
 <div [ngClass]="{'open-menu': toggleMenu}" class="nav" style="height: 100vh">
@@ -16,7 +20,7 @@
         </div>
         <div class="d-flex just-center">
             <div class="section greeting">
-                <h2 [ngClass]="{orange: timerColorOrange, 'open-menu': toggleMenu}" (click)="scrollTo('contact')">Say Hi!</h2>
+                <h2 [ngClass]="{orange: timerColorOrange, 'open-menu': toggleMenu}">Say Hi!</h2>
             </div>
         </div>
         <div class="d-flex just-center">

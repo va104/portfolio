@@ -8,7 +8,7 @@
         <p class="text-center">This page is samle of my work - please feel free to try them out.</p>
     </div>
     <!-- Ring Of Fire -->
-    <div class="count-projects right">01/06</div>
+    <div class="count-projects right">01/05</div>
     <div 
         class="project-wrapper d-flex d-column pos-rel"
         appObserveElement 
@@ -29,49 +29,8 @@
             </div>
         </div>
     </div>
-    <!-- My Portfolio -->
-    <div class="count-projects">02/06</div>
-    <div 
-        class="project-wrapper d-flex d-column pos-rel align-end"
-        appObserveElement 
-        #portfolio='intersectionExport' 
-        [threshold]="0.4"
-        [class.project-wrapper--is-intersecting]="portfolio._isIntersecting">
-        <div class="project-image-right">
-            <img src="../../assets/images/projects/portfolio.png" alt="Portfolio">
-        </div>
-        <div class="project d-flex d-column align-end">
-            <h3>Portfolio</h3>
-            <p class="skills">Angular | HTML | SCSS</p>
-            <p class="description right">My personal website to show project results from the last few months. Feel free to take a closer look at the code on Github</p>
-            <div class="d-flex">
-                <button><a href="https://github.com/va104/portfolio" target="_blank">Github</a></button>
-            </div>
-        </div>
-    </div>
-    <!-- Join -->
-    <div class="count-projects right">03/06</div>
-    <div class="project-wrapper d-flex d-column pos-rel"
-        appObserveElement 
-        #join='intersectionExport' 
-        [threshold]="0.4"
-        [class.project-wrapper--is-intersecting]="join._isIntersecting">
-        <div class="project-image-left">
-            <img src="../../assets/images/projects/portfolio_join.png" alt="Join">
-        </div>
-        <div class="project">
-            <h3>Join</h3>
-            <p class="skills">JavaScript | HTML | CSS</p>
-            <p class="description">Task manager inspired by the Kanban System. Create and organize tasks using drag and
-                drop functions, assign users and categories.</p>
-            <div class="d-flex">
-                <button><a href="https://join.vanessa-wuerdinger.de" target="_blank">Try out</a></button>
-                <button><a href="https://github.com/va104/join" target="_blank">Github</a></button>
-            </div>
-        </div>
-    </div> 
     <!-- Ell Pollo Loco -->
-    <div class="count-projects">04/06</div>
+    <div class="count-projects">02/05</div>
     <div 
         class="project-wrapper d-flex d-column pos-rel align-end"
         appObserveElement 
@@ -92,46 +51,66 @@
             </div>
         </div>
     </div>
+    <!-- Join -->
+    <div class="count-projects right">03/05</div>
+    <div class="project-wrapper d-flex d-column pos-rel"
+        appObserveElement 
+        #join='intersectionExport' 
+        [threshold]="0.4"
+        [class.project-wrapper--is-intersecting]="join._isIntersecting">
+        <div class="project-image-left">
+            <img src="../../assets/images/projects/portfolio_join.png" alt="Join">
+        </div>
+        <div class="project">
+            <h3>Join</h3>
+            <p class="skills">JavaScript | HTML | CSS</p>
+            <p class="description">Task manager inspired by the Kanban System. Create and organize tasks using drag and
+                drop functions, assign users and categories.</p>
+            <div class="d-flex">
+                <button><a href="https://join.vanessa-wuerdinger.de" target="_blank">Try out</a></button>
+                <button><a href="https://github.com/va104/join" target="_blank">Github</a></button>
+            </div>
+        </div>
+    </div> 
     <!-- Pokedex -->
-    <div class="count-projects right">05/06</div>
-    <div 
-        class="project-wrapper d-flex d-column pos-rel"
+    <div class="count-projects">04/05</div>
+    <div class="project-wrapper d-flex d-column pos-rel align-end"
         appObserveElement 
         #pokedex='intersectionExport' 
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="pokedex._isIntersecting">
-        <div class="project-image-left">
+        <div class="project-image-right">
             <img src="../../assets/images/projects/portfolio_pokedex.png" alt="Pokedex">
         </div>
-        <div class="project">
+        <div class="project d-flex d-column align-end">
             <h3>Pokédex</h3>
             <p class="skills">JavaScript | HTML | CSS | API</p>
-            <p class="description">Based on the PokéAPI library that provides and catalogues pokémon information.</p>
+            <p class="description right">Based on the PokéAPI library that provides and catalogues pokémon information.</p>
             <div class="d-flex">
                 <button><a href="https://pokedex.vanessa-wuerdinger.de" target="_blank">Try out</a></button>
                 <button><a href="https://github.com/va104/pokedex" target="_blank">Github</a></button>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- Donut Hero -->
-    <div class="count-projects">06/06</div>
-    <div class="project-wrapper d-flex d-column pos-rel align-end"
+    <div class="count-projects right">05/05</div>
+    <div class="project-wrapper d-flex d-column pos-rel"
         appObserveElement 
-        #donuthero='intersectionExport' 
+        #donuthero='intersectionExport'
         [threshold]="0.4"
         [class.project-wrapper--is-intersecting]="donuthero._isIntersecting">
-        <div class="project-image-right">
+        <div class="project-image-left">
             <img src="../../assets/images/projects/portfolio_donutHero.png" alt="DonutHero">
         </div>
-        <div class="project d-flex d-column align-end">
+        <div class="project">
             <h3>Donut Hero</h3>
             <p class="skills">JavaScript | HTML | CSS</p>
-            <p class="description right">This delivery service website was inspired by Lieferando. Main focus of this project is the simulation of a easy online shopping process. 
+            <p class="description">This delivery service website was inspired by Lieferando. Main focus of this project is the simulation of a easy online shopping process. 
                 For this reason not all functionalities are implemented.</p>
             <div class="d-flex">
                 <button><a href="https://donut-hero.vanessa-wuerdinger.de" target="_blank">Try out</a></button>
                 <button><a href="https://github.com/va104/donutHero" target="_blank">Github</a></button>
             </div>
         </div>
-    </div>
+    </div>     
 </div>
