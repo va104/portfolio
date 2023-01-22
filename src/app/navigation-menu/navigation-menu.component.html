@@ -3,7 +3,7 @@
         <h3 routerLink="/" (click)="scrollTo('home')" class="logo">[V.W]</h3>
         <div class="d-flex align-center">
             <a href="" (click)="translation.use('en')"></a>
-            <div class="language"><span (click)="translation.use('en')">EN&nbsp;</span>|<span (click)="translation.use('de')">&nbsp;DE</span></div>
+            <div class="language"><span (click)="translation.use('en'); toggleLanguage('en')" [class.active-language]="languageIsEN">EN&nbsp;</span>|<span (click)="translation.use('de'); toggleLanguage('de')" [class.active-language]="!languageIsEN">&nbsp;DE</span></div>
             <div [ngClass]="{'open': toggleMenu, 'closed': !toggleMenu}" (click)="openCloseMenu()" class="wrapper-menu">
                 <div class="line-menu half start"></div>
                 <div class="line-menu"></div>

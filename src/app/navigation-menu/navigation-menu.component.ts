@@ -14,6 +14,7 @@ export class NavigationMenuComponent implements OnInit {
   timerColorOrange = false; 
   isMobile = false; 
   translation: TranslateService;
+  languageIsEN = true;
 
   constructor(
     private scrolling: ScrollingService, 
@@ -60,5 +61,15 @@ export class NavigationMenuComponent implements OnInit {
     setTimeout(() => {
       this.openCloseMenu();
     }, 300);
+  }
+
+  toggleLanguage(language: string) {
+    if(language == 'en') {
+      this.languageIsEN = true;
+    }
+    if(language == 'de') {
+      this.languageIsEN = false;
+    }
+
   }
 }
