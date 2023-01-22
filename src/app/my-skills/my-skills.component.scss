@@ -112,9 +112,9 @@ h2 {
         color: var(--color-orange);
     }
 
-    &:hover img {
-        animation: bounceIcon 400ms cubic-bezier(0, 0.82, 0.05, 0.08);
-    }
+    // &:hover img {
+    //     animation: bounceIcon 400ms cubic-bezier(0, 0.82, 0.05, 0.08);
+    // }
     
     @media (max-width: 500px) {
         display: flex;
