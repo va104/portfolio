@@ -203,13 +203,6 @@ button:hover {
     }
 }
 
-.p-bottom-110 {
-    @media (max-width: 500px) {
-        padding-bottom: 40px;
-        ;
-    }
-}
-
 .mobile-container {
     @media (max-width: 1150px) {
         flex-direction: column;

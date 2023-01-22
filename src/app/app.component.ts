@@ -18,7 +18,9 @@ export class AppComponent implements OnInit {
     // translate.use('en');
 }
   ngOnInit(): void {
-    AOS.init();
+    AOS.init({
+      startEvent: 'load',
+    });
   }
 
 }
