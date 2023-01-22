@@ -31,11 +31,17 @@ h2 {
 .background {
     background-color: var(--color-beige);
     overflow: hidden;
+
+    img {
+        width: 75px;
+        height: 75px;
+        object-fit: contain;
+    }
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 70px;
     border: 4px solid black;
     padding: 10%;
