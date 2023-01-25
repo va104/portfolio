@@ -193,6 +193,13 @@ button:hover {
 
 }
 
+.p-bottom-110 {
+    @media (max-width: 500px) {
+        padding-bottom: 40px;
+        ;
+    }
+}
+
 .p-right-180 {
     @media (max-width: 600px) {
         padding-right: 100px;
