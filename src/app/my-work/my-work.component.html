@@ -6,57 +6,10 @@
         </div>
         <p class="text-center">{{ 'portfolio.subtitle' | translate }}</p>
     </div>
-    <!-- Ring Of Fire -->
-    <div 
-    class="project-wrapper d-flex pos-rel"
-    appObserveElement 
-    #rof='intersectionExport' 
-    [threshold]="0.5"
-    [class.project-wrapper--is-intersecting]="rof._isIntersecting"
-    >
-        <span class="pos-right">01/05</span>
-        <div class="project-image-right">
-            <img style="object-position: right;" src="../../assets/images/projects/portfolio_ringOfFire.png" alt="Join">
-        </div>
-        <div class="project right">
-            <h3>Ring of Fire</h3>
-            <p class="skills">Angular | HTML | SCSS | Firebase</p>
-            <p class="description">{{ 'portfolio.rofText' | translate }}</p>
-            <div class="d-flex">
-                <button><a href="https://ring-of-fire.vanessa-wuerdinger.de" target="_blank">{{ 'portfolio.try' | translate }}</a></button>
-                <button><a href="https://github.com/va104/ringoffire" target="_blank">Github</a></button>
-            </div>
-        </div>
-    </div>
-    <!-- Ell Pollo Loco -->
-    <div class="project-wrapper d-flex pos-rel"
-    appObserveElement 
-    #epl='intersectionExport' 
-    [threshold]="0.5"
-    [class.project-wrapper--is-intersecting]="epl._isIntersecting">
-        <span class="pos-left">02/05</span>
-        <div class="project left">
-            <h3>El Pollo Loco</h3>
-            <p class="skills">JavaScript | HTML | CSS</p>
-            <p class="description"> {{ 'portfolio.eplText' | translate }}</p>
-            <div class="d-flex">
-                <button><a href="https://el-pollo-loco.vanessa-wuerdinger.de" target="_blank">{{ 'portfolio.try' | translate }}</a></button>
-                <button><a href="https://github.com/va104/el-pollo-loco" target="_blank">Github</a></button>
-            </div>
-        </div>
-        <div class="project-image-left">
-            <img src="../../assets/images/projects/portfolio_elPolloLoco_color.svg" alt="">
-        </div>
-    </div>
     <!-- Join -->
-    <div 
-    class="project-wrapper d-flex pos-rel"
-    appObserveElement 
-    #join='intersectionExport' 
-    [threshold]="0.5"
-    [class.project-wrapper--is-intersecting]="join._isIntersecting"
-    >
-        <span class="pos-right">03/05</span>
+    <div class="project-wrapper d-flex pos-rel" appObserveElement #join='intersectionExport' [threshold]="0.5"
+        [class.project-wrapper--is-intersecting]="join._isIntersecting">
+        <span class="pos-right">01/05</span>
         <div class="project-image-right">
             <img style="object-position: left;" src="../../assets/images/projects/portfolio_join.png" alt="Join">
         </div>
@@ -65,26 +18,60 @@
             <p class="skills">JavaScript | HTML | CSS</p>
             <p class="description">{{ 'portfolio.joinText' | translate }}</p>
             <div class="d-flex">
-                <button><a href="https://join.vanessa-wuerdinger.de" target="_blank">{{ 'portfolio.try' | translate }}</a></button>
-                <button><a href="https://github.com/va104/join" target="_blank">Github</a></button>
+                <a href="https://join.vanessa-wuerdinger.de" target="_blank"><button>{{ 'portfolio.try' | translate
+                        }}</button></a>
+                <a href="https://github.com/va104/join" target="_blank"><button>Github</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- Ell Pollo Loco -->
+    <div class="project-wrapper d-flex pos-rel" appObserveElement #epl='intersectionExport' [threshold]="0.5"
+        [class.project-wrapper--is-intersecting]="epl._isIntersecting">
+        <span class="pos-left">02/05</span>
+        <div class="project left">
+            <h3>El Pollo Loco</h3>
+            <p class="skills">JavaScript | HTML | CSS</p>
+            <p class="description"> {{ 'portfolio.eplText' | translate }}</p>
+            <div class="d-flex">
+                <a href="https://el-pollo-loco.vanessa-wuerdinger.de" target="_blank"><button>{{ 'portfolio.try' |
+                        translate }}</button></a>
+                <a href="https://github.com/va104/el-pollo-loco" target="_blank"><button>Github</button></a>
+            </div>
+        </div>
+        <div class="project-image-left">
+            <img src="../../assets/images/projects/portfolio_elPolloLoco_color.svg" alt="">
+        </div>
+    </div>
+    <!-- Ring Of Fire -->
+    <div class="project-wrapper d-flex pos-rel" appObserveElement #rof='intersectionExport' [threshold]="0.5"
+        [class.project-wrapper--is-intersecting]="rof._isIntersecting">
+        <span class="pos-right">03/05</span>
+        <div class="project-image-right">
+            <img style="object-position: right;" src="../../assets/images/projects/portfolio_ringOfFire.png" alt="Join">
+        </div>
+        <div class="project right">
+            <h3>Ring of Fire</h3>
+            <p class="skills">Angular | HTML | SCSS | Firebase</p>
+            <p class="description">{{ 'portfolio.rofText' | translate }}</p>
+            <div class="d-flex">
+                <a href="https://ring-of-fire.vanessa-wuerdinger.de" target="_blank"><button>{{ 'portfolio.try' |
+                        translate }}</button></a>
+                <a href="https://github.com/va104/ringoffire" target="_blank"><button>Github</button></a>
             </div>
         </div>
     </div>
     <!-- Pokedex -->
-    <div 
-    class="project-wrapper d-flex pos-rel"
-    appObserveElement 
-    #pokedex='intersectionExport' 
-    [threshold]="0.5"
-    [class.project-wrapper--is-intersecting]="pokedex._isIntersecting">
+    <div class="project-wrapper d-flex pos-rel" appObserveElement #pokedex='intersectionExport' [threshold]="0.5"
+        [class.project-wrapper--is-intersecting]="pokedex._isIntersecting">
         <span class="pos-left">04/05</span>
         <div class="project left">
             <h3>Pokédex</h3>
             <p class="skills">JavaScript | HTML | CSS | API</p>
             <p class="description">{{ 'portfolio.pokedexText' | translate }}</p>
             <div class="d-flex">
-                <button><a href="https://pokedex.vanessa-wuerdinger.de" target="_blank">{{ 'portfolio.try' | translate }}</a></button>
-                <button><a href="https://github.com/va104/pokedex" target="_blank">Github</a></button>
+                <a href="https://pokedex.vanessa-wuerdinger.de" target="_blank"><button>{{ 'portfolio.try' | translate
+                        }}</button></a>
+                <a href="https://github.com/va104/pokedex" target="_blank"><button>Github</button></a>
             </div>
         </div>
         <div class="project-image-left">
@@ -92,13 +79,8 @@
         </div>
     </div>
     <!-- Donut Hero -->
-    <div 
-    class="project-wrapper d-flex pos-rel"
-    appObserveElement 
-    #donuthero='intersectionExport'
-    [threshold]="0.5"
-    [class.project-wrapper--is-intersecting]="donuthero._isIntersecting"
-    >
+    <div class="project-wrapper d-flex pos-rel" appObserveElement #donuthero='intersectionExport' [threshold]="0.5"
+        [class.project-wrapper--is-intersecting]="donuthero._isIntersecting">
         <span class="pos-right">05/05</span>
         <div class="project-image-right">
             <img src="../../assets/images/projects/portfolio_donutHero.png" alt="Donuthero">
@@ -108,8 +90,9 @@
             <p class="skills">JavaScript | HTML | CSS</p>
             <p class="description">{{ 'portfolio.donutText' | translate }}</p>
             <div class="d-flex">
-                <button><a href="https://donut-hero.vanessa-wuerdinger.de/" target="_blank">{{ 'portfolio.try' | translate }}</a></button>
-                <button><a href="https://github.com/va104/donutHero" target="_blank">Github</a></button>
+                <a href="https://donut-hero.vanessa-wuerdinger.de/" target="_blank"><button>{{ 'portfolio.try' |
+                        translate }}</button></a>
+                <a href="https://github.com/va104/donutHero" target="_blank"><button>Github</button></a>
             </div>
         </div>
     </div>

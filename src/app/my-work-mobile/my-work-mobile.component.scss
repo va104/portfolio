@@ -196,12 +196,17 @@ h2 {
 }
 
 .project {
-    button:first-child {
-        margin-right: 5%;
-    }
 
-    button:nth-child(2) {
-        margin-left: 5%;
+    a:link button,
+    a:visited button,
+    a:hover button,
+    a:active button {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+    a:first-child {
+        margin-right: 25px;
     }
 
     .skills {
